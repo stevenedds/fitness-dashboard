@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAINS // IRON TEMPLE</title>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --bg-black: #0a0a0a;
@@ -22,6 +19,8 @@
             --concrete: #3a3a3a;
             --text-white: #f5f5f5;
             --text-dim: #666666;
+            --cyan: #00d4ff;
+            --purple: #9d4edd;
         }
 
         body {
@@ -32,27 +31,15 @@
             overflow-x: hidden;
         }
 
-        /* Industrial texture overlay */
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                repeating-linear-gradient(
-                    0deg,
-                    transparent,
-                    transparent 2px,
-                    rgba(255,255,255,0.01) 2px,
-                    rgba(255,255,255,0.01) 4px
-                );
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px);
             pointer-events: none;
             z-index: 1000;
         }
 
-        /* Brutalist header */
         .header {
             background: var(--rust);
             padding: 15px 20px;
@@ -66,54 +53,18 @@
         .header::after {
             content: '';
             position: absolute;
-            bottom: -20px;
-            left: 0;
-            width: 100%;
-            height: 14px;
-            background: repeating-linear-gradient(
-                90deg,
-                var(--warning-yellow) 0px,
-                var(--warning-yellow) 20px,
-                var(--bg-black) 20px,
-                var(--bg-black) 40px
-            );
+            bottom: -20px; left: 0; width: 100%; height: 14px;
+            background: repeating-linear-gradient(90deg, var(--warning-yellow) 0px, var(--warning-yellow) 20px, var(--bg-black) 20px, var(--bg-black) 40px);
         }
 
-        .logo {
-            font-family: 'Anton', sans-serif;
-            font-size: 2rem;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--bg-black);
-        }
+        .logo { font-family: 'Anton', sans-serif; font-size: 2rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bg-black); }
+        .status { font-size: 0.7rem; text-transform: uppercase; color: var(--bg-black); font-weight: 700; }
+        .status span { display: block; font-size: 1.2rem; }
 
-        .status {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            color: var(--bg-black);
-            font-weight: 700;
-        }
+        .container { padding: 50px 20px 40px; max-width: 1400px; margin: 0 auto; }
 
-        .status span {
-            display: block;
-            font-size: 1.2rem;
-        }
-
-        /* Main container */
-        .container {
-            padding: 50px 20px 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* Massive stats display */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 4px;
-            margin-bottom: 40px;
-        }
-
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-bottom: 40px; }
         .stat-block {
             background: var(--steel);
             padding: 25px 20px;
@@ -121,81 +72,26 @@
             border: 2px solid var(--concrete);
             transition: all 0.1s ease;
         }
+        .stat-block:hover { background: var(--concrete); border-color: var(--rust); }
+        .stat-block::before { content: attr(data-index); position: absolute; top: 8px; left: 10px; font-size: 0.6rem; color: var(--text-dim); font-weight: 700; }
+        .stat-label { font-size: 0.65rem; text-transform: uppercase; color: var(--text-dim); letter-spacing: 0.2em; margin-bottom: 8px; }
+        .stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; line-height: 1; color: var(--text-white); }
+        .stat-value.highlight { color: var(--acid-green); }
+        .stat-unit { font-size: 1rem; color: var(--text-dim); margin-left: 4px; }
+        .stat-trend { font-size: 0.7rem; margin-top: 5px; }
+        .stat-trend.up { color: var(--acid-green); }
+        .stat-trend.down { color: var(--rust); }
 
-        .stat-block:hover {
-            background: var(--concrete);
-            border-color: var(--rust);
-        }
-
-        .stat-block::before {
-            content: attr(data-index);
-            position: absolute;
-            top: 8px;
-            left: 10px;
-            font-size: 0.6rem;
-            color: var(--text-dim);
-            font-weight: 700;
-        }
-
-        .stat-label {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            color: var(--text-dim);
-            letter-spacing: 0.2em;
-            margin-bottom: 8px;
-        }
-
-        .stat-value {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
-            line-height: 1;
-            color: var(--text-white);
-        }
-
-        .stat-value.highlight {
-            color: var(--acid-green);
-        }
-
-        .stat-unit {
-            font-size: 1rem;
-            color: var(--text-dim);
-            margin-left: 4px;
-        }
-
-        /* Section headers - brutalist style */
+        /* Section headers */
         .section-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding-bottom: 10px;
             border-bottom: 4px solid var(--rust);
         }
+        .section-header h2 { font-family: 'Anton', sans-serif; font-size: 1.8rem; letter-spacing: 0.15em; text-transform: uppercase; }
+        .section-header .tag { background: var(--warning-yellow); color: var(--bg-black); padding: 4px 12px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
 
-        .section-header h2 {
-            font-family: 'Anton', sans-serif;
-            font-size: 1.8rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
-
-        .section-header .tag {
-            background: var(--warning-yellow);
-            color: var(--bg-black);
-            padding: 4px 12px;
-            font-size: 0.65rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* PR Board - Industrial plates */
-        .pr-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4px;
-            margin-bottom: 50px;
-        }
-
+        /* PR Board */
+        .pr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-bottom: 50px; }
         .pr-card {
             background: var(--bg-dark);
             border: 3px solid var(--concrete);
@@ -203,294 +99,161 @@
             position: relative;
             transition: all 0.15s ease;
         }
+        .pr-card::before { content: ''; position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: var(--rust); }
+        .pr-card:hover { border-color: var(--rust); transform: translateX(4px); }
+        .pr-card:hover::before { background: var(--acid-green); }
+        .pr-exercise { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; padding-left: 15px; }
+        .pr-weight { font-family: 'Anton', sans-serif; font-size: 2.8rem; color: var(--acid-green); padding-left: 15px; line-height: 1; }
+        .pr-weight span { font-size: 1rem; color: var(--text-dim); }
+        .pr-meta { font-size: 0.7rem; color: var(--text-dim); margin-top: 8px; padding-left: 15px; text-transform: uppercase; }
+        .pr-days { font-size: 0.65rem; padding-left: 15px; margin-top: 4px; }
+        .pr-days.recent { color: var(--acid-green); }
+        .pr-days.stale { color: var(--warning-yellow); }
+        .pr-days.old { color: var(--rust); }
 
-        .pr-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 100%;
-            background: var(--rust);
+        /* Days Since PR Grid */
+        .days-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin-bottom: 50px; }
+        .days-card {
+            background: var(--steel);
+            border: 2px solid var(--concrete);
+            padding: 15px;
+            text-align: center;
         }
+        .days-card .days { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; line-height: 1; }
+        .days-card .days.green { color: var(--acid-green); }
+        .days-card .days.yellow { color: var(--warning-yellow); }
+        .days-card .days.red { color: var(--rust); }
+        .days-card .lift { font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase; margin-top: 5px; }
 
-        .pr-card:hover {
-            border-color: var(--rust);
-            transform: translateX(4px);
-        }
-
-        .pr-card:hover::before {
-            background: var(--acid-green);
-        }
-
-        .pr-exercise {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.3rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            padding-left: 15px;
-        }
-
-        .pr-weight {
-            font-family: 'Anton', sans-serif;
-            font-size: 2.8rem;
-            color: var(--acid-green);
-            padding-left: 15px;
-            line-height: 1;
-        }
-
-        .pr-weight span {
-            font-size: 1rem;
-            color: var(--text-dim);
-        }
-
-        .pr-meta {
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            margin-top: 8px;
-            padding-left: 15px;
-            text-transform: uppercase;
-        }
-
-        /* Progress chart area */
-        .progress-section {
-            margin-bottom: 50px;
-        }
-
+        /* Chart containers */
+        .chart-section { margin-bottom: 50px; }
+        .chart-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .chart-container {
             background: var(--steel);
             border: 3px solid var(--concrete);
-            padding: 30px;
-            position: relative;
-        }
-
-        .chart-container::before {
-            content: 'PROGRESS_TRACKING.EXE';
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 0.6rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-        }
-
-        .chart-visual {
-            height: 200px;
-            display: flex;
-            align-items: flex-end;
-            gap: 8px;
-            padding: 20px 0;
-            border-bottom: 2px solid var(--concrete);
-        }
-
-        .chart-bar {
-            flex: 1;
-            background: var(--rust);
-            min-height: 20px;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .chart-bar:hover {
-            background: var(--acid-green);
-        }
-
-        .chart-bar::after {
-            content: attr(data-value);
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-
-        .chart-bar:hover::after {
-            opacity: 1;
-            color: var(--acid-green);
-        }
-
-        .chart-labels {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .chart-labels span {
-            font-size: 0.6rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-        }
-
-        /* Recent workouts - industrial log style */
-        .workouts-section {
-            margin-bottom: 50px;
-        }
-
-        .workout-log {
-            background: var(--bg-dark);
-            border: 3px solid var(--concrete);
-            max-height: 500px;
-            overflow-y: auto;
-        }
-
-        .workout-entry {
-            display: grid;
-            grid-template-columns: 100px 1fr auto;
-            gap: 20px;
             padding: 20px;
-            border-bottom: 2px solid var(--steel);
-            align-items: center;
-            transition: background 0.1s;
+            position: relative;
         }
-
-        .workout-entry:hover {
-            background: var(--steel);
+        .chart-container::before {
+            content: attr(data-label);
+            position: absolute; top: 10px; right: 15px;
+            font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase;
         }
-
-        .workout-entry:last-child {
-            border-bottom: none;
-        }
-
-        .workout-date {
+        .chart-container h3 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.5rem;
-            color: var(--rust);
-        }
-
-        .workout-date span {
-            display: block;
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .workout-detail h4 {
-            font-family: 'Anton', sans-serif;
             font-size: 1.2rem;
             letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            color: var(--rust);
         }
+        .chart-wrapper { height: 200px; position: relative; }
 
-        .workout-detail p {
-            font-size: 0.75rem;
-            color: var(--text-dim);
+        /* Muscle Distribution */
+        .muscle-section { margin-bottom: 50px; }
+        .muscle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .muscle-chart { background: var(--steel); border: 3px solid var(--concrete); padding: 20px; }
+        .muscle-chart h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; margin-bottom: 15px; color: var(--rust); }
+        .muscle-bars { }
+        .muscle-bar-row { display: flex; align-items: center; margin-bottom: 10px; }
+        .muscle-bar-label { width: 80px; font-size: 0.7rem; text-transform: uppercase; color: var(--text-dim); }
+        .muscle-bar-track { flex: 1; height: 20px; background: var(--bg-dark); border: 1px solid var(--concrete); position: relative; }
+        .muscle-bar-fill { height: 100%; transition: width 0.5s ease; }
+        .muscle-bar-value { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-size: 0.65rem; color: var(--text-white); }
+
+        /* Push/Pull Gauge */
+        .gauge-container { background: var(--steel); border: 3px solid var(--concrete); padding: 20px; }
+        .gauge-container h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; margin-bottom: 15px; color: var(--rust); }
+        .gauge { display: flex; align-items: center; gap: 15px; }
+        .gauge-bar { flex: 1; height: 30px; background: var(--bg-dark); border: 2px solid var(--concrete); display: flex; overflow: hidden; }
+        .gauge-push { background: var(--rust); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; }
+        .gauge-pull { background: var(--acid-green); color: var(--bg-black); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; }
+        .gauge-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; width: 50px; }
+        .gauge-ratio { text-align: center; margin-top: 10px; font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; }
+        .gauge-ratio span { color: var(--text-dim); font-size: 0.8rem; }
+
+        /* Calendar Heatmap */
+        .calendar-section { margin-bottom: 50px; }
+        .calendar-container { background: var(--steel); border: 3px solid var(--concrete); padding: 20px; }
+        .calendar-months { display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .calendar-months span { font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(22, 1fr); gap: 3px; }
+        .calendar-day {
+            aspect-ratio: 1;
+            background: var(--bg-dark);
+            border: 1px solid var(--concrete);
+            border-radius: 2px;
         }
+        .calendar-day.level-1 { background: rgba(180, 255, 0, 0.2); }
+        .calendar-day.level-2 { background: rgba(180, 255, 0, 0.5); }
+        .calendar-day.level-3 { background: var(--acid-green); }
+        .calendar-legend { display: flex; align-items: center; justify-content: flex-end; gap: 5px; margin-top: 10px; }
+        .calendar-legend span { font-size: 0.6rem; color: var(--text-dim); }
+        .calendar-legend .box { width: 12px; height: 12px; border-radius: 2px; }
 
-        .workout-detail .pr-badge {
-            display: inline-block;
-            background: var(--acid-green);
-            color: var(--bg-black);
-            padding: 2px 8px;
-            font-size: 0.6rem;
-            font-weight: 700;
-            margin-left: 8px;
+        /* Week Comparison */
+        .comparison-section { margin-bottom: 50px; }
+        .comparison-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; }
+        .comparison-card {
+            background: var(--steel);
+            border: 3px solid var(--concrete);
+            padding: 25px;
+            text-align: center;
         }
+        .comparison-card h4 { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 10px; }
+        .comparison-card .value { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; }
+        .comparison-card .value.current { color: var(--acid-green); }
+        .comparison-card .value.previous { color: var(--text-dim); }
+        .comparison-card .change { font-size: 0.8rem; margin-top: 5px; }
+        .comparison-card .change.up { color: var(--acid-green); }
+        .comparison-card .change.down { color: var(--rust); }
 
-        .workout-volume {
-            text-align: right;
+        /* Workout Log */
+        .workouts-section { margin-bottom: 50px; }
+        .workout-log { background: var(--bg-dark); border: 3px solid var(--concrete); max-height: 400px; overflow-y: auto; }
+        .workout-entry {
+            display: grid; grid-template-columns: 100px 1fr auto;
+            gap: 20px; padding: 20px; border-bottom: 2px solid var(--steel); align-items: center;
+            transition: background 0.1s;
         }
+        .workout-entry:hover { background: var(--steel); }
+        .workout-entry:last-child { border-bottom: none; }
+        .workout-date { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--rust); }
+        .workout-date span { display: block; font-size: 0.7rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; }
+        .workout-detail h4 { font-family: 'Anton', sans-serif; font-size: 1.2rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 5px; }
+        .workout-detail p { font-size: 0.75rem; color: var(--text-dim); }
+        .workout-detail .pr-badge { display: inline-block; background: var(--acid-green); color: var(--bg-black); padding: 2px 8px; font-size: 0.6rem; font-weight: 700; margin-left: 8px; }
+        .workout-volume { text-align: right; }
+        .workout-volume .number { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--acid-green); }
+        .workout-volume .label { font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase; }
 
-        .workout-volume .number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.8rem;
-            color: var(--acid-green);
-        }
-
-        .workout-volume .label {
-            font-size: 0.6rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-        }
-
-        /* Motivation block - aggressive */
+        /* Motivation Block */
         .motivation-block {
             background: var(--rust);
             padding: 40px;
             position: relative;
             overflow: hidden;
         }
-
-        .motivation-block::before {
-            content: '//';
-            position: absolute;
-            top: -30px;
-            right: 20px;
-            font-family: 'Anton', sans-serif;
-            font-size: 15rem;
-            color: rgba(0,0,0,0.2);
-            line-height: 1;
-        }
-
-        .motivation-quote {
-            font-family: 'Anton', sans-serif;
-            font-size: 2.5rem;
-            line-height: 1.1;
-            text-transform: uppercase;
-            color: var(--bg-black);
-            max-width: 600px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .motivation-stat {
-            margin-top: 30px;
-            display: inline-block;
-            background: var(--bg-black);
-            padding: 15px 25px;
-        }
-
-        .motivation-stat span {
-            display: block;
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-
-        .motivation-stat strong {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            color: var(--acid-green);
-        }
+        .motivation-block::before { content: '//'; position: absolute; top: -30px; right: 20px; font-family: 'Anton', sans-serif; font-size: 15rem; color: rgba(0,0,0,0.2); line-height: 1; }
+        .motivation-quote { font-family: 'Anton', sans-serif; font-size: 2.5rem; line-height: 1.1; text-transform: uppercase; color: var(--bg-black); max-width: 600px; position: relative; z-index: 1; }
+        .motivation-stat { margin-top: 30px; display: inline-block; background: var(--bg-black); padding: 15px 25px; }
+        .motivation-stat span { display: block; font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 5px; }
+        .motivation-stat strong { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--acid-green); }
 
         /* Responsive */
         @media (max-width: 900px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .pr-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .stat-value {
-                font-size: 2.5rem;
-            }
+            .stats-grid, .chart-grid, .muscle-grid, .comparison-grid { grid-template-columns: 1fr; }
+            .pr-grid { grid-template-columns: repeat(2, 1fr); }
+            .days-grid { grid-template-columns: repeat(3, 1fr); }
+            .stat-value { font-size: 2.5rem; }
         }
-
         @media (max-width: 600px) {
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            .pr-grid {
-                grid-template-columns: 1fr;
-            }
-            .workout-entry {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-            .workout-volume {
-                text-align: left;
-            }
-            .motivation-quote {
-                font-size: 1.8rem;
-            }
+            .pr-grid, .days-grid { grid-template-columns: 1fr; }
+            .workout-entry { grid-template-columns: 1fr; gap: 10px; }
+            .workout-volume { text-align: left; }
+            .motivation-quote { font-size: 1.8rem; }
+            .calendar-grid { grid-template-columns: repeat(11, 1fr); }
         }
 
-        /* Animations */
         @keyframes glitch {
             0%, 100% { transform: translate(0); }
             20% { transform: translate(-2px, 2px); }
@@ -498,19 +261,13 @@
             60% { transform: translate(2px, 2px); }
             80% { transform: translate(2px, -2px); }
         }
-
-        .stat-value:hover {
-            animation: glitch 0.3s ease;
-        }
+        .stat-value:hover { animation: glitch 0.3s ease; }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="logo">Iron Temple</div>
-        <div class="status">
-            System Active
-            <span id="streak-bar">██████ 100%</span>
-        </div>
+        <div class="status">System Active<span>██████ 100%</span></div>
     </header>
 
     <main class="container">
@@ -534,49 +291,142 @@
             </div>
         </section>
 
+        <!-- Week Comparison -->
+        <section class="comparison-section">
+            <div class="section-header">
+                <h2>This Week vs Last</h2>
+                <span class="tag">Performance</span>
+            </div>
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h4>This Week Volume</h4>
+                    <div class="value current" id="this-week-vol">--</div>
+                    <div class="change" id="vol-change">--</div>
+                </div>
+                <div class="comparison-card">
+                    <h4>Last Week Volume</h4>
+                    <div class="value previous" id="last-week-vol">--</div>
+                    <div class="change">baseline</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Days Since PR -->
+        <section class="days-section">
+            <div class="section-header">
+                <h2>Days Since PR</h2>
+                <span class="tag">Staleness Check</span>
+            </div>
+            <div class="days-grid" id="days-grid"></div>
+        </section>
+
         <!-- PR Board -->
         <section class="pr-section">
             <div class="section-header">
                 <h2>Personal Records</h2>
                 <span class="tag">Current Max</span>
             </div>
-            <div class="pr-grid" id="pr-grid">
-                <!-- Dynamically populated -->
-            </div>
+            <div class="pr-grid" id="pr-grid"></div>
         </section>
 
-        <!-- Progress Chart -->
-        <section class="progress-section">
+        <!-- Weight Progression Charts -->
+        <section class="chart-section">
             <div class="section-header">
-                <h2>Volume Progression</h2>
-                <span class="tag">Weekly Trend</span>
+                <h2>Weight Progression</h2>
+                <span class="tag">Strength Gains</span>
             </div>
-            <div class="chart-container">
-                <div class="chart-visual" id="chart-visual">
-                    <!-- Dynamically populated -->
+            <div class="chart-grid">
+                <div class="chart-container" data-label="PULL_STRENGTH.DAT">
+                    <h3>Weighted Pull-ups</h3>
+                    <div class="chart-wrapper"><canvas id="pullup-chart"></canvas></div>
                 </div>
-                <div class="chart-labels" id="chart-labels">
-                    <!-- Dynamically populated -->
+                <div class="chart-container" data-label="BACK_VOLUME.DAT">
+                    <h3>Lat Pull</h3>
+                    <div class="chart-wrapper"><canvas id="lat-chart"></canvas></div>
+                </div>
+                <div class="chart-container" data-label="PRESS_POWER.DAT">
+                    <h3>DB Press</h3>
+                    <div class="chart-wrapper"><canvas id="press-chart"></canvas></div>
+                </div>
+                <div class="chart-container" data-label="LEG_DRIVE.DAT">
+                    <h3>Bulgarian Split Squat</h3>
+                    <div class="chart-wrapper"><canvas id="bss-chart"></canvas></div>
                 </div>
             </div>
         </section>
 
-        <!-- Recent Workouts -->
+        <!-- Volume Over Time -->
+        <section class="chart-section">
+            <div class="section-header">
+                <h2>Total Volume Trend</h2>
+                <span class="tag">All Workouts</span>
+            </div>
+            <div class="chart-container" data-label="VOLUME_TRACKING.EXE">
+                <h3>Weekly Volume (lbs)</h3>
+                <div class="chart-wrapper" style="height: 250px;"><canvas id="volume-chart"></canvas></div>
+            </div>
+        </section>
+
+        <!-- Muscle Group & Push/Pull -->
+        <section class="muscle-section">
+            <div class="section-header">
+                <h2>Volume Distribution</h2>
+                <span class="tag">Balance Check</span>
+            </div>
+            <div class="muscle-grid">
+                <div class="muscle-chart">
+                    <h3>By Muscle Group</h3>
+                    <div class="muscle-bars" id="muscle-bars"></div>
+                </div>
+                <div class="gauge-container">
+                    <h3>Push / Pull Ratio</h3>
+                    <div class="gauge">
+                        <div class="gauge-label">Push</div>
+                        <div class="gauge-bar">
+                            <div class="gauge-push" id="gauge-push">--</div>
+                            <div class="gauge-pull" id="gauge-pull">--</div>
+                        </div>
+                        <div class="gauge-label">Pull</div>
+                    </div>
+                    <div class="gauge-ratio"><span id="push-pull-ratio">--</span> <span>(ideal: 1:1)</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consistency Calendar -->
+        <section class="calendar-section">
+            <div class="section-header">
+                <h2>Consistency</h2>
+                <span class="tag">Workout Calendar</span>
+            </div>
+            <div class="calendar-container">
+                <div class="calendar-months">
+                    <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span>
+                </div>
+                <div class="calendar-grid" id="calendar-grid"></div>
+                <div class="calendar-legend">
+                    <span>Less</span>
+                    <div class="box" style="background: var(--bg-dark); border: 1px solid var(--concrete);"></div>
+                    <div class="box" style="background: rgba(180, 255, 0, 0.2);"></div>
+                    <div class="box" style="background: rgba(180, 255, 0, 0.5);"></div>
+                    <div class="box" style="background: var(--acid-green);"></div>
+                    <span>More</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workout Log -->
         <section class="workouts-section">
             <div class="section-header">
                 <h2>Workout Log</h2>
                 <span class="tag" id="workout-count">-- Sessions</span>
             </div>
-            <div class="workout-log" id="workout-log">
-                <!-- Dynamically populated -->
-            </div>
+            <div class="workout-log" id="workout-log"></div>
         </section>
 
         <!-- Motivation Block -->
         <section class="motivation-block">
-            <div class="motivation-quote">
-                The iron never lies. The weight doesn't care about your excuses.
-            </div>
+            <div class="motivation-quote">The iron never lies. The weight doesn't care about your excuses.</div>
             <div class="motivation-stat">
                 <span>Current Focus</span>
                 <strong id="next-target">WEIGHTED PULL-UPS</strong>
@@ -585,110 +435,253 @@
     </main>
 
     <script>
+        const chartColors = {
+            rust: '#c44d2c',
+            green: '#b4ff00',
+            yellow: '#f0c000',
+            cyan: '#00d4ff',
+            purple: '#9d4edd',
+            dim: '#666666'
+        };
+
+        const chartDefaults = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { grid: { color: '#3a3a3a' }, ticks: { color: '#666', font: { size: 10 } } },
+                y: { grid: { color: '#3a3a3a' }, ticks: { color: '#666', font: { size: 10 } } }
+            }
+        };
+
         fetch('workouts.json')
             .then(r => r.json())
             .then(data => {
                 const exercises = data.exercises;
                 const prs = data.prs;
                 const workouts = data.workouts;
-                
-                // Stats
+                const today = new Date();
+
+                // Basic stats
                 document.getElementById('total-workouts').textContent = workouts.length;
                 document.getElementById('total-prs').textContent = Object.keys(prs).length;
                 document.getElementById('streak').innerHTML = '22<span class="stat-unit">wks</span>';
                 document.getElementById('start-date').textContent = 'SEP 25';
                 document.getElementById('workout-count').textContent = workouts.length + ' Sessions';
-                
+
+                // Names
+                const prNames = {
+                    'weighted_pullups': 'Pull-ups', 'techno_lat_pull': 'Lat Pull', 'seated_db_press': 'DB Press',
+                    'bulgarian_split_squat': 'BSS', 'neck_curls': 'Neck', 'overhead_tricep_ext': 'Triceps',
+                    'incline_chest_press': 'Incline'
+                };
+
+                // Days Since PR
+                const daysGrid = document.getElementById('days-grid');
+                Object.entries(prs).forEach(([id, pr]) => {
+                    const prDate = new Date(pr.date + 'T12:00:00');
+                    const days = Math.floor((today - prDate) / (1000 * 60 * 60 * 24));
+                    let colorClass = days < 14 ? 'green' : days < 45 ? 'yellow' : 'red';
+                    daysGrid.innerHTML += `
+                        <div class="days-card">
+                            <div class="days ${colorClass}">${days}</div>
+                            <div class="lift">${prNames[id] || id}</div>
+                        </div>`;
+                });
+
                 // PR Grid
                 const prGrid = document.getElementById('pr-grid');
-                const prNames = {
-                    'weighted_pullups': 'Weighted Pull-ups',
-                    'techno_lat_pull': 'Lat Pull',
-                    'seated_db_press': 'DB Press',
-                    'bulgarian_split_squat': 'Bulgarian Split',
-                    'neck_curls': 'Neck Curls',
-                    'overhead_tricep_ext': 'Tricep Ext',
-                    'incline_chest_press': 'Incline Press'
-                };
-                
                 Object.entries(prs).forEach(([id, pr]) => {
-                    const name = prNames[id] || exercises[id]?.name || id;
-                    const date = new Date(pr.date + 'T12:00:00');
-                    const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                    
+                    const prDate = new Date(pr.date + 'T12:00:00');
+                    const days = Math.floor((today - prDate) / (1000 * 60 * 60 * 24));
+                    const dateStr = prDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    let daysClass = days < 14 ? 'recent' : days < 45 ? 'stale' : 'old';
                     prGrid.innerHTML += `
                         <div class="pr-card">
-                            <div class="pr-exercise">${name}</div>
+                            <div class="pr-exercise">${prNames[id] || id}</div>
                             <div class="pr-weight">${pr.weight} <span>× ${pr.reps}</span></div>
                             <div class="pr-meta">Set: ${dateStr}</div>
-                        </div>
-                    `;
+                            <div class="pr-days ${daysClass}">${days} days ago</div>
+                        </div>`;
                 });
-                
-                // Volume Chart (last 8 workouts)
-                const chartVisual = document.getElementById('chart-visual');
-                const chartLabels = document.getElementById('chart-labels');
-                const recentWorkouts = workouts.slice(0, 8).reverse();
-                
-                const volumes = recentWorkouts.map(w => {
-                    let vol = 0;
-                    w.exercises.forEach(ex => {
-                        ex.sets.forEach(s => {
-                            vol += (s.weight || 0) * s.reps;
-                        });
+
+                // Exercise data extraction
+                function getExerciseData(exerciseId) {
+                    const points = [];
+                    workouts.slice().reverse().forEach(w => {
+                        const ex = w.exercises.find(e => e.id === exerciseId);
+                        if (ex) {
+                            const topSet = ex.sets.reduce((best, s) => s.weight > (best.weight || 0) ? s : best, ex.sets[0]);
+                            points.push({ date: w.date, weight: topSet.weight, reps: topSet.reps });
+                        }
                     });
-                    return vol;
+                    return points;
+                }
+
+                // Weight progression charts
+                function createWeightChart(canvasId, exerciseId, color) {
+                    const data = getExerciseData(exerciseId);
+                    if (data.length === 0) return;
+                    new Chart(document.getElementById(canvasId), {
+                        type: 'line',
+                        data: {
+                            labels: data.map(d => { const dt = new Date(d.date + 'T12:00:00'); return dt.toLocaleDateString('en-US', {month:'short', day:'numeric'}); }),
+                            datasets: [{
+                                data: data.map(d => d.weight),
+                                borderColor: color,
+                                backgroundColor: color + '33',
+                                fill: true,
+                                tension: 0.3,
+                                pointRadius: 4,
+                                pointBackgroundColor: color
+                            }]
+                        },
+                        options: {...chartDefaults, scales: {...chartDefaults.scales, y: {...chartDefaults.scales.y, beginAtZero: false}}}
+                    });
+                }
+
+                createWeightChart('pullup-chart', 'weighted_pullups', chartColors.green);
+                createWeightChart('lat-chart', 'techno_lat_pull', chartColors.rust);
+                createWeightChart('press-chart', 'seated_db_press', chartColors.cyan);
+                createWeightChart('bss-chart', 'bulgarian_split_squat', chartColors.yellow);
+
+                // Volume per workout
+                const volumeData = workouts.slice().reverse().map(w => {
+                    let vol = 0;
+                    w.exercises.forEach(ex => ex.sets.forEach(s => vol += (s.weight || 0) * s.reps));
+                    return { date: w.date, volume: vol };
                 });
+
+                new Chart(document.getElementById('volume-chart'), {
+                    type: 'bar',
+                    data: {
+                        labels: volumeData.map(d => { const dt = new Date(d.date + 'T12:00:00'); return dt.toLocaleDateString('en-US', {month:'short', day:'numeric'}); }),
+                        datasets: [{
+                            data: volumeData.map(d => d.volume),
+                            backgroundColor: chartColors.rust,
+                            borderColor: chartColors.rust,
+                            borderWidth: 1,
+                            borderRadius: 2
+                        }]
+                    },
+                    options: chartDefaults
+                });
+
+                // Week comparison
+                const thisWeekWorkouts = workouts.filter(w => {
+                    const d = new Date(w.date + 'T12:00:00');
+                    const weekAgo = new Date(today); weekAgo.setDate(weekAgo.getDate() - 7);
+                    return d >= weekAgo;
+                });
+                const lastWeekWorkouts = workouts.filter(w => {
+                    const d = new Date(w.date + 'T12:00:00');
+                    const weekAgo = new Date(today); weekAgo.setDate(weekAgo.getDate() - 7);
+                    const twoWeeksAgo = new Date(today); twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+                    return d >= twoWeeksAgo && d < weekAgo;
+                });
+
+                function calcVolume(workoutList) {
+                    return workoutList.reduce((total, w) => {
+                        w.exercises.forEach(ex => ex.sets.forEach(s => total += (s.weight || 0) * s.reps));
+                        return total;
+                    }, 0);
+                }
+
+                const thisWeekVol = calcVolume(thisWeekWorkouts);
+                const lastWeekVol = calcVolume(lastWeekWorkouts);
+                document.getElementById('this-week-vol').textContent = (thisWeekVol / 1000).toFixed(1) + 'K';
+                document.getElementById('last-week-vol').textContent = (lastWeekVol / 1000).toFixed(1) + 'K';
                 
-                const maxVol = Math.max(...volumes);
+                const volChange = lastWeekVol > 0 ? ((thisWeekVol - lastWeekVol) / lastWeekVol * 100).toFixed(0) : 0;
+                const volChangeEl = document.getElementById('vol-change');
+                volChangeEl.textContent = (volChange >= 0 ? '+' : '') + volChange + '% vs last week';
+                volChangeEl.className = 'change ' + (volChange >= 0 ? 'up' : 'down');
+
+                // Muscle group volume
+                const muscleVolume = { Back: 0, Chest: 0, Shoulders: 0, Triceps: 0, Legs: 0, Neck: 0 };
+                const muscleMap = {
+                    'weighted_pullups': 'Back', 'techno_lat_pull': 'Back',
+                    'incline_chest_press': 'Chest', 'seated_db_press': 'Shoulders',
+                    'overhead_tricep_ext': 'Triceps', 'bulgarian_split_squat': 'Legs',
+                    'pistol_squat': 'Legs', 'neck_curls': 'Neck'
+                };
+                workouts.forEach(w => {
+                    w.exercises.forEach(ex => {
+                        const muscle = muscleMap[ex.id] || 'Other';
+                        if (muscleVolume[muscle] !== undefined) {
+                            ex.sets.forEach(s => muscleVolume[muscle] += (s.weight || 0) * s.reps);
+                        }
+                    });
+                });
+
+                const muscleBars = document.getElementById('muscle-bars');
+                const maxMuscle = Math.max(...Object.values(muscleVolume));
+                const muscleColors = { Back: chartColors.green, Chest: chartColors.rust, Shoulders: chartColors.cyan, Triceps: chartColors.purple, Legs: chartColors.yellow, Neck: '#ff6b6b' };
+                Object.entries(muscleVolume).forEach(([muscle, vol]) => {
+                    const pct = (vol / maxMuscle * 100).toFixed(0);
+                    muscleBars.innerHTML += `
+                        <div class="muscle-bar-row">
+                            <div class="muscle-bar-label">${muscle}</div>
+                            <div class="muscle-bar-track">
+                                <div class="muscle-bar-fill" style="width: ${pct}%; background: ${muscleColors[muscle]};"></div>
+                                <div class="muscle-bar-value">${(vol/1000).toFixed(0)}K</div>
+                            </div>
+                        </div>`;
+                });
+
+                // Push/Pull ratio
+                const pushVol = muscleVolume.Chest + muscleVolume.Shoulders + muscleVolume.Triceps;
+                const pullVol = muscleVolume.Back;
+                const totalPP = pushVol + pullVol;
+                const pushPct = (pushVol / totalPP * 100).toFixed(0);
+                const pullPct = (pullVol / totalPP * 100).toFixed(0);
+                document.getElementById('gauge-push').style.width = pushPct + '%';
+                document.getElementById('gauge-push').textContent = pushPct + '%';
+                document.getElementById('gauge-pull').style.width = pullPct + '%';
+                document.getElementById('gauge-pull').textContent = pullPct + '%';
+                document.getElementById('push-pull-ratio').textContent = (pushVol / pullVol).toFixed(2) + ':1';
+
+                // Calendar heatmap
+                const calendarGrid = document.getElementById('calendar-grid');
+                const startDate = new Date('2025-09-01');
+                const workoutDates = new Set(workouts.map(w => w.date));
                 
-                volumes.forEach((vol, i) => {
-                    const pct = (vol / maxVol) * 100;
-                    const volK = (vol / 1000).toFixed(1) + 'K';
-                    chartVisual.innerHTML += `<div class="chart-bar" style="height: ${pct}%;" data-value="${volK}"></div>`;
+                // Generate ~22 weeks of days
+                for (let i = 0; i < 154; i++) {
+                    const d = new Date(startDate);
+                    d.setDate(d.getDate() + i);
+                    const dateStr = d.toISOString().split('T')[0];
                     
-                    const date = new Date(recentWorkouts[i].date + 'T12:00:00');
-                    const label = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                    chartLabels.innerHTML += `<span>${label}</span>`;
-                });
-                
+                    let level = '';
+                    if (workoutDates.has(dateStr)) {
+                        // Check volume that day
+                        const workout = workouts.find(w => w.date === dateStr);
+                        if (workout) {
+                            let vol = 0;
+                            workout.exercises.forEach(ex => ex.sets.forEach(s => vol += (s.weight || 0) * s.reps));
+                            level = vol > 15000 ? 'level-3' : vol > 8000 ? 'level-2' : 'level-1';
+                        }
+                    }
+                    calendarGrid.innerHTML += `<div class="calendar-day ${level}" title="${dateStr}"></div>`;
+                }
+
                 // Workout Log
                 const workoutLog = document.getElementById('workout-log');
-                const dayLabels = {
-                    'Monday': 'Pull + Chest',
-                    'Wednesday': 'Legs + Access',
-                    'Friday': 'Shoulders + Back'
-                };
-                const shortNames = {
-                    'weighted_pullups': 'Pull-ups',
-                    'incline_chest_press': 'Incline',
-                    'techno_lat_pull': 'Lat Pull',
-                    'seated_db_press': 'DB Press',
-                    'bulgarian_split_squat': 'BSS',
-                    'pistol_squat': 'Pistols',
-                    'neck_curls': 'Neck',
-                    'overhead_tricep_ext': 'Triceps'
-                };
+                const dayLabels = { 'Monday': 'Pull + Chest', 'Wednesday': 'Legs + Access', 'Friday': 'Shoulders + Back' };
                 
                 workouts.forEach(w => {
                     const date = new Date(w.date + 'T12:00:00');
                     const monthDay = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase();
-                    const dayName = w.day;
                     
                     let vol = 0;
                     let exerciseList = [];
                     let hasPR = false;
                     
                     w.exercises.forEach(ex => {
-                        const name = shortNames[ex.id] || ex.id;
-                        const topSet = ex.sets.reduce((best, s) => 
-                            (s.weight > (best.weight || 0)) ? s : best, ex.sets[0]);
+                        const name = prNames[ex.id] || ex.id;
+                        const topSet = ex.sets.reduce((best, s) => (s.weight > (best.weight || 0)) ? s : best, ex.sets[0]);
+                        const setStr = topSet.weight === 0 ? `${name} BW×${topSet.reps}` : `${name} ${topSet.weight}×${topSet.reps}`;
                         
-                        const setStr = topSet.weight === 0 
-                            ? `${name} BW×${topSet.reps}` 
-                            : `${name} ${topSet.weight}×${topSet.reps}`;
-                        
-                        // Check if this is a PR
                         const pr = prs[ex.id];
                         if (pr && pr.date === w.date) {
                             hasPR = true;
@@ -696,28 +689,21 @@
                         } else {
                             exerciseList.push(setStr);
                         }
-                        
-                        ex.sets.forEach(s => {
-                            vol += (s.weight || 0) * s.reps;
-                        });
+                        ex.sets.forEach(s => vol += (s.weight || 0) * s.reps);
                     });
                     
                     workoutLog.innerHTML += `
                         <div class="workout-entry">
-                            <div class="workout-date">
-                                ${monthDay}
-                                <span>${dayName}</span>
-                            </div>
+                            <div class="workout-date">${monthDay}<span>${w.day}</span></div>
                             <div class="workout-detail">
-                                <h4>${dayLabels[dayName] || dayName}${hasPR ? '<span class="pr-badge">PR</span>' : ''}</h4>
+                                <h4>${dayLabels[w.day] || w.day}${hasPR ? '<span class="pr-badge">PR</span>' : ''}</h4>
                                 <p>${exerciseList.join(' • ')}</p>
                             </div>
                             <div class="workout-volume">
                                 <div class="number">${vol.toLocaleString()}</div>
                                 <div class="label">Total LBS</div>
                             </div>
-                        </div>
-                    `;
+                        </div>`;
                 });
             });
     </script>
