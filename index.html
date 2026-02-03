@@ -311,15 +311,6 @@
             </div>
         </section>
 
-        <!-- Days Since PR -->
-        <section class="days-section">
-            <div class="section-header">
-                <h2>Days Since PR</h2>
-                <span class="tag">Staleness Check</span>
-            </div>
-            <div class="days-grid" id="days-grid"></div>
-        </section>
-
         <!-- PR Board -->
         <section class="pr-section">
             <div class="section-header">
@@ -475,19 +466,6 @@
                     'bulgarian_split_squat': 'BSS', 'neck_curls': 'Neck', 'overhead_tricep_ext': 'Triceps',
                     'incline_chest_press': 'Incline'
                 };
-
-                // Days Since PR
-                const daysGrid = document.getElementById('days-grid');
-                Object.entries(prs).forEach(([id, pr]) => {
-                    const prDate = new Date(pr.date + 'T12:00:00');
-                    const days = Math.floor((today - prDate) / (1000 * 60 * 60 * 24));
-                    let colorClass = days < 14 ? 'green' : days < 45 ? 'yellow' : 'red';
-                    daysGrid.innerHTML += `
-                        <div class="days-card">
-                            <div class="days ${colorClass}">${days}</div>
-                            <div class="lift">${prNames[id] || id}</div>
-                        </div>`;
-                });
 
                 // PR Grid
                 const prGrid = document.getElementById('pr-grid');
