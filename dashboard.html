@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven's Lift Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #161b22 0%, #1a2332 100%);
+            border-radius: 15px;
+            border: 1px solid #30363d;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            color: #8b949e;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .badge.streak { background: #238636; color: white; }
+        .badge.workouts { background: #1f6feb; color: white; }
+        .badge.months { background: #8957e5; color: white; }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: #58a6ff;
+        }
+        .stat-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .stat-card .label {
+            font-size: 0.8rem;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        .stat-card .value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #c9d1d9;
+        }
+        .stat-card .sub {
+            font-size: 0.85rem;
+            color: #3fb950;
+            margin-top: 5px;
+        }
+        .stat-card .sub.neutral { color: #8b949e; }
+        .stat-card .sub.warning { color: #f0883e; }
+        
+        .section {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .section-header h2 {
+            color: #c9d1d9;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+        }
+        .pr-item {
+            background: #0d1117;
+            border-radius: 10px;
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #3fb950;
+        }
+        .pr-item .info {
+            display: flex;
+            flex-direction: column;
+        }
+        .pr-item .exercise {
+            font-weight: 600;
+            color: #c9d1d9;
+            margin-bottom: 4px;
+        }
+        .pr-item .date {
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+        .pr-item .values {
+            text-align: right;
+        }
+        .pr-item .pr-value {
+            color: #3fb950;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .pr-item .est-1rm {
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+        
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .chart-container {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .chart-container h3 {
+            color: #c9d1d9;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chart-container h3 .trend {
+            font-size: 0.85rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            margin-left: auto;
+        }
+        .chart-container h3 .trend.up { background: rgba(63, 185, 80, 0.2); color: #3fb950; }
+        .chart-container h3 .trend.stable { background: rgba(139, 148, 158, 0.2); color: #8b949e; }
+        .chart-wrapper {
+            position: relative;
+            height: 250px;
+        }
+        
+        .workout-log {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .workout-entry {
+            background: #0d1117;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .workout-entry:last-child {
+            margin-bottom: 0;
+        }
+        .workout-entry .date-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .workout-entry .date {
+            font-weight: 600;
+            color: #58a6ff;
+        }
+        .workout-entry .day-badge {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background: #21262d;
+            color: #8b949e;
+        }
+        .workout-entry .exercises {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .workout-entry .exercise-tag {
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 6px;
+            background: #21262d;
+            color: #c9d1d9;
+        }
+        .workout-entry .exercise-tag.pr {
+            background: rgba(63, 185, 80, 0.2);
+            color: #3fb950;
+            border: 1px solid #238636;
+        }
+        
+        .split-overview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .split-day {
+            background: #0d1117;
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+        }
+        .split-day .day-name {
+            font-weight: 600;
+            color: #58a6ff;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .split-day .focus {
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .split-day .main-lifts {
+            font-size: 0.85rem;
+            color: #c9d1d9;
+        }
+        
+        .insights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .insight-card {
+            background: #0d1117;
+            border-radius: 10px;
+            padding: 18px;
+            border-left: 4px solid;
+        }
+        .insight-card.positive { border-color: #3fb950; }
+        .insight-card.warning { border-color: #f0883e; }
+        .insight-card.info { border-color: #58a6ff; }
+        .insight-card .title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .insight-card .desc {
+            font-size: 0.9rem;
+            color: #8b949e;
+            line-height: 1.5;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #8b949e;
+            font-size: 0.85rem;
+        }
+        .footer a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .chart-grid { grid-template-columns: 1fr; }
+            .split-overview { grid-template-columns: 1fr; }
+            .chart-wrapper { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏋️ Steven's Lift Dashboard</h1>
+            <p class="subtitle">Tracking gains since September 2025</p>
+            <div class="badges">
+                <span class="badge streak">🔥 5 Month Streak</span>
+                <span class="badge workouts">💪 65+ Workouts</span>
+                <span class="badge months">📈 Consistent M/W/F</span>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="icon">🎯</div>
+                <div class="label">This Week</div>
+                <div class="value">2/3</div>
+                <div class="sub">Mon ✓ Wed pending</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">🏆</div>
+                <div class="label">Pull-up PR</div>
+                <div class="value">70×7</div>
+                <div class="sub">Est 1RM: 84 lbs</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">📊</div>
+                <div class="label">Lat Pull PR</div>
+                <div class="value">250×7</div>
+                <div class="sub">Est 1RM: 292 lbs</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">🦵</div>
+                <div class="label">BSS Progress</div>
+                <div class="value">40 lbs</div>
+                <div class="sub">+100% in 5 weeks</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">💪</div>
+                <div class="label">Shoulder PR</div>
+                <div class="value">75×12</div>
+                <div class="sub">Est 1RM: 107 lbs</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">🦒</div>
+                <div class="label">Neck Curls</div>
+                <div class="value">25×18</div>
+                <div class="sub">+150% from start</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>📅 Training Split</h2>
+            </div>
+            <div class="split-overview">
+                <div class="split-day">
+                    <div class="day-name">Monday</div>
+                    <div class="focus">Pull + Chest</div>
+                    <div class="main-lifts">Weighted Pull-ups • Incline Press • Delt Raises • Neck</div>
+                </div>
+                <div class="split-day">
+                    <div class="day-name">Wednesday</div>
+                    <div class="focus">Legs + Accessories</div>
+                    <div class="main-lifts">Bulgarian Split Squats • Pistols • Triceps • Rear Delts</div>
+                </div>
+                <div class="split-day">
+                    <div class="day-name">Friday</div>
+                    <div class="focus">Shoulders + Back</div>
+                    <div class="main-lifts">DB Press • Lat Pull • Triceps • Shrugs</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>🏆 Personal Records</h2>
+            </div>
+            <div class="pr-grid">
+                <div class="pr-item">
+                    <div class="info">
+                        <span class="exercise">Weighted Pull-ups</span>
+                        <span class="date">Nov 10, 2025</span>
+                    </div>
+                    <div class="values">
+                        <div class="pr-value">70 lbs × 7</div>
+                        <div class="est-1rm">~84 lb e1RM</div>
+                    </div>
+                </div>
+                <div class="pr-item">
+                    <div class="info">
+                        <span class="exercise">TechnoGym Lat Pull</span>
+                        <span class="date">Dec 5, 2025</span>
+                    </div>
+                    <div class="values">
+                        <div class="pr-value">250 lbs × 7</div>
+                        <div class="est-1rm">~292 lb e1RM</div>
+                    </div>
+                </div>
+                <div class="pr-item">
+                    <div class="info">
+                        <span class="exercise">Seated DB Press</span>
+                        <span class="date">Jan 30, 2026</span>
+                    </div>
+                    <div class="values">
+                        <div class="pr-value">75 lbs × 12</div>
+                        <div class="est-1rm">~107 lb e1RM</div>
+                    </div>
+                </div>
+                <div class="pr-item">
+                    <div class="info">
+                        <span class="exercise">Bulgarian Split Squat</span>
+                        <span class="date">Jan 28, 2026</span>
+                    </div>
+                    <div class="values">
+                        <div class="pr-value">40 lbs × 12</div>
+                        <div class="est-1rm">~57 lb e1RM</div>
+                    </div>
+                </div>
+                <div class="pr-item">
+                    <div class="info">
+                        <span class="exercise">Overhead Tricep Ext</span>
+                        <span class="date">Jan 28, 2026</span>
+                    </div>
+                    <div class="values">
+                        <div class="pr-value">75 lbs × 12</div>
+                        <div class="est-1rm">~107 lb e1RM</div>
+                    </div>
+                </div>
+                <div class="pr-item">
+                    <div class="info">
+                        <span class="exercise">Neck Curls</span>
+                        <span class="date">Feb 2, 2026</span>
+                    </div>
+                    <div class="values">
+                        <div class="pr-value">25 lbs × 18</div>
+                        <div class="est-1rm">~40 lb e1RM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-grid">
+            <div class="chart-container">
+                <h3>
+                    Weighted Pull-ups
+                    <span class="trend stable">Maintaining 60lb</span>
+                </h3>
+                <div class="chart-wrapper">
+                    <canvas id="pullupChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3>
+                    TechnoGym Lat Pull
+                    <span class="trend up">+25% since Sept</span>
+                </h3>
+                <div class="chart-wrapper">
+                    <canvas id="latChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-grid">
+            <div class="chart-container">
+                <h3>
+                    Bulgarian Split Squats
+                    <span class="trend up">+100% in 5 weeks</span>
+                </h3>
+                <div class="chart-wrapper">
+                    <canvas id="bssChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3>
+                    Neck Curls
+                    <span class="trend up">+150% since start</span>
+                </h3>
+                <div class="chart-wrapper">
+                    <canvas id="neckChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>💡 Insights & Recommendations</h2>
+            </div>
+            <div class="insights">
+                <div class="insight-card positive">
+                    <div class="title">📈 Bulgarian Split Squats on Fire</div>
+                    <div class="desc">You've doubled the weight in 5 weeks (20→40 lbs). Keep pushing — try 45s next Wednesday.</div>
+                </div>
+                <div class="insight-card positive">
+                    <div class="title">🦒 Neck Gains Are Real</div>
+                    <div class="desc">From 10lb × 20 to 25lb × 18. Impressive progression on an exercise most people ignore.</div>
+                </div>
+                <div class="insight-card warning">
+                    <div class="title">⚠️ Incline Press Plateau</div>
+                    <div class="desc">Stuck at 75lb DBs for 2+ months. Consider: drop sets, pause reps, or switch to barbell for a cycle.</div>
+                </div>
+                <div class="insight-card info">
+                    <div class="title">🎯 Pull-up Strategy</div>
+                    <div class="desc">You hit 70×7 in November but dropped to 60 for cleaner reps. Smart move — rebuild to 70×8 next.</div>
+                </div>
+                <div class="insight-card info">
+                    <div class="title">🦵 Add Heavy Leg Compound?</div>
+                    <div class="desc">BSS and pistols are great, but no heavy squats/deadlifts. Intentional or opportunity?</div>
+                </div>
+                <div class="insight-card positive">
+                    <div class="title">✅ Consistency King</div>
+                    <div class="desc">5 months of 3×/week with barely any missed sessions. This is the actual secret.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>📜 Recent Workouts</h2>
+            </div>
+            <div class="workout-log">
+                <div class="workout-entry">
+                    <div class="date-header">
+                        <span class="date">Monday, Feb 2</span>
+                        <span class="day-badge">Pull + Chest</span>
+                    </div>
+                    <div class="exercises">
+                        <span class="exercise-tag">Pull-ups: 60×8, 50×8</span>
+                        <span class="exercise-tag">Incline Press: 75×7, 70×9</span>
+                        <span class="exercise-tag">Machine Press: 200×8, 190×9</span>
+                        <span class="exercise-tag">Bicep Curls: 45×10, 45×8</span>
+                        <span class="exercise-tag pr">🏆 Neck Curls: 25×18</span>
+                    </div>
+                </div>
+                <div class="workout-entry">
+                    <div class="date-header">
+                        <span class="date">Friday, Jan 30</span>
+                        <span class="day-badge">Shoulders + Back</span>
+                    </div>
+                    <div class="exercises">
+                        <span class="exercise-tag">DB Press: 75×12, 70×12×2</span>
+                        <span class="exercise-tag">Lat Pull: 235×7, 220×10</span>
+                        <span class="exercise-tag">Tricep Ext: 75×12×2</span>
+                        <span class="exercise-tag">Delt Raises: 30×6, 25×10×2</span>
+                        <span class="exercise-tag">DB Shrugs: 70×15×3</span>
+                    </div>
+                </div>
+                <div class="workout-entry">
+                    <div class="date-header">
+                        <span class="date">Wednesday, Jan 28</span>
+                        <span class="day-badge">Legs + Accessories</span>
+                    </div>
+                    <div class="exercises">
+                        <span class="exercise-tag pr">🏆 BSS: 40×12×2</span>
+                        <span class="exercise-tag">Pistol Squats: BW×10×2</span>
+                        <span class="exercise-tag pr">🏆 Tricep Ext: 75×12</span>
+                        <span class="exercise-tag">Cable Lat Raises: 20×9, 20×8</span>
+                        <span class="exercise-tag">Neck Curls: 25×18, 25×16</span>
+                    </div>
+                </div>
+                <div class="workout-entry">
+                    <div class="date-header">
+                        <span class="date">Monday, Jan 26</span>
+                        <span class="day-badge">Pull + Chest</span>
+                    </div>
+                    <div class="exercises">
+                        <span class="exercise-tag">Pull-ups: 60×~8, 50×8</span>
+                        <span class="exercise-tag">Incline Press: 75×6, 65×10</span>
+                        <span class="exercise-tag">Machine Press: 195×10, 185×10</span>
+                        <span class="exercise-tag">Delt Raises: 25×10×3</span>
+                    </div>
+                </div>
+                <div class="workout-entry">
+                    <div class="date-header">
+                        <span class="date">Friday, Jan 23</span>
+                        <span class="day-badge">Shoulders + Back</span>
+                    </div>
+                    <div class="exercises">
+                        <span class="exercise-tag">DB Press: 75×12, 70×12×2</span>
+                        <span class="exercise-tag">Lat Pull: 235×9, 220×9, 205×12</span>
+                        <span class="exercise-tag">Tricep Ext: 70×12×2</span>
+                        <span class="exercise-tag">Delt Raises: 25×11, 25×10, 25×9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Last updated: February 2, 2026 • Built with 💪 by OpenClaw</p>
+            <p>Weekly summaries every Sunday at 6pm • Check-ins M/W/F at 2pm</p>
+        </div>
+    </div>
+
+    <script>
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: '#161b22',
+                    borderColor: '#30363d',
+                    borderWidth: 1,
+                    titleColor: '#c9d1d9',
+                    bodyColor: '#8b949e',
+                    padding: 12,
+                    cornerRadius: 8
+                }
+            },
+            scales: {
+                x: {
+                    grid: { color: '#21262d', drawBorder: false },
+                    ticks: { color: '#8b949e', font: { size: 11 } }
+                },
+                y: {
+                    grid: { color: '#21262d', drawBorder: false },
+                    ticks: { color: '#8b949e', font: { size: 11 } }
+                }
+            }
+        };
+
+        // Weighted Pull-ups Chart
+        new Chart(document.getElementById('pullupChart'), {
+            type: 'line',
+            data: {
+                labels: ['Sep 15', 'Sep 22', 'Sep 29', 'Oct 6', 'Oct 13', 'Oct 20', 'Oct 27', 'Nov 2', 'Nov 10', 'Nov 17', 'Dec 1', 'Dec 29', 'Jan 5', 'Jan 12', 'Jan 19', 'Jan 26', 'Feb 2'],
+                datasets: [{
+                    label: 'Top Set Weight (lbs)',
+                    data: [45, 50, 55, 60, 60, 65, 65, 70, 70, 70, 70, 60, 60, 60, 60, 60, 60],
+                    borderColor: '#58a6ff',
+                    backgroundColor: 'rgba(88, 166, 255, 0.1)',
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: '#58a6ff',
+                    pointBorderColor: '#0d1117',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {...chartOptions, scales: {...chartOptions.scales, y: {...chartOptions.scales.y, min: 40, max: 80}}}
+        });
+
+        // Lat Pull Chart
+        new Chart(document.getElementById('latChart'), {
+            type: 'line',
+            data: {
+                labels: ['Sep 19', 'Oct 3', 'Oct 10', 'Oct 24', 'Nov 7', 'Nov 14', 'Nov 28', 'Dec 5', 'Dec 26', 'Jan 9', 'Jan 16', 'Jan 23', 'Jan 30'],
+                datasets: [{
+                    label: 'Top Set Weight (lbs)',
+                    data: [200, 210, 220, 220, 230, 250, 250, 250, 220, 230, 235, 235, 235],
+                    borderColor: '#f0883e',
+                    backgroundColor: 'rgba(240, 136, 62, 0.1)',
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: '#f0883e',
+                    pointBorderColor: '#0d1117',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {...chartOptions, scales: {...chartOptions.scales, y: {...chartOptions.scales.y, min: 180, max: 270}}}
+        });
+
+        // Bulgarian Split Squat Chart
+        new Chart(document.getElementById('bssChart'), {
+            type: 'line',
+            data: {
+                labels: ['Dec 31', 'Jan 7', 'Jan 14', 'Jan 21', 'Jan 28'],
+                datasets: [{
+                    label: 'Working Weight (lbs)',
+                    data: [20, 20, 30, 35, 40],
+                    borderColor: '#3fb950',
+                    backgroundColor: 'rgba(63, 185, 80, 0.1)',
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: '#3fb950',
+                    pointBorderColor: '#0d1117',
+                    pointBorderWidth: 2,
+                    pointRadius: 6,
+                    pointHoverRadius: 8
+                }]
+            },
+            options: {...chartOptions, scales: {...chartOptions.scales, y: {...chartOptions.scales.y, min: 0, max: 50}}}
+        });
+
+        // Neck Curls Chart
+        new Chart(document.getElementById('neckChart'), {
+            type: 'line',
+            data: {
+                labels: ['Nov 12', 'Nov 17', 'Dec 1', 'Dec 29', 'Jan 5', 'Jan 7', 'Jan 12', 'Jan 14', 'Jan 19', 'Jan 26', 'Feb 2'],
+                datasets: [{
+                    label: 'Working Weight (lbs)',
+                    data: [10, 10, 10, 10, 10, 15, 10, 25, 25, 25, 25],
+                    borderColor: '#8957e5',
+                    backgroundColor: 'rgba(137, 87, 229, 0.1)',
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: '#8957e5',
+                    pointBorderColor: '#0d1117',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {...chartOptions, scales: {...chartOptions.scales, y: {...chartOptions.scales.y, min: 0, max: 35}}}
+        });
+    </script>
+</body>
+</html>

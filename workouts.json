@@ -1,0 +1,252 @@
+{
+  "profile": {
+    "name": "Steven Edds",
+    "startDate": "2025-09-10",
+    "split": ["Monday: Pull/Chest", "Wednesday: Legs/Accessories", "Friday: Shoulders/Back"]
+  },
+  "exercises": {
+    "weighted_pullups": {
+      "name": "Weighted Pull-ups",
+      "category": "back",
+      "unit": "lbs",
+      "trackPR": true
+    },
+    "incline_chest_press": {
+      "name": "Incline Chest Press (DB)",
+      "category": "chest",
+      "unit": "lbs",
+      "trackPR": true
+    },
+    "techno_lat_pull": {
+      "name": "TechnoGym Lat Pull",
+      "category": "back",
+      "unit": "lbs",
+      "trackPR": true
+    },
+    "seated_db_press": {
+      "name": "Seated DB Press",
+      "category": "shoulders",
+      "unit": "lbs",
+      "trackPR": true
+    },
+    "bulgarian_split_squat": {
+      "name": "Bulgarian Split Squat",
+      "category": "legs",
+      "unit": "lbs",
+      "trackPR": true
+    },
+    "pistol_squat": {
+      "name": "Pistol Squats",
+      "category": "legs",
+      "unit": "bw",
+      "trackPR": false
+    },
+    "neck_curls": {
+      "name": "Neck Curls",
+      "category": "neck",
+      "unit": "lbs",
+      "trackPR": true
+    },
+    "overhead_tricep_ext": {
+      "name": "Overhead Cable Tricep Extensions",
+      "category": "triceps",
+      "unit": "lbs",
+      "trackPR": true
+    }
+  },
+  "workouts": [
+    {
+      "date": "2026-02-02",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 8}, {"weight": 50, "reps": 8}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 7}, {"weight": 70, "reps": 9}]},
+        {"id": "neck_curls", "sets": [{"weight": 0, "reps": 20}, {"weight": 25, "reps": 18}, {"weight": 25, "reps": 14}]}
+      ]
+    },
+    {
+      "date": "2026-01-30",
+      "day": "Friday",
+      "exercises": [
+        {"id": "seated_db_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 70, "reps": 12}, {"weight": 70, "reps": 12}]},
+        {"id": "techno_lat_pull", "sets": [{"weight": 235, "reps": 7}, {"weight": 220, "reps": 10}]}
+      ]
+    },
+    {
+      "date": "2026-01-28",
+      "day": "Wednesday",
+      "exercises": [
+        {"id": "bulgarian_split_squat", "sets": [{"weight": 0, "reps": 12}, {"weight": 40, "reps": 12}, {"weight": 40, "reps": 12}]},
+        {"id": "pistol_squat", "sets": [{"weight": 0, "reps": 10}, {"weight": 0, "reps": 10}]},
+        {"id": "overhead_tricep_ext", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 10}]},
+        {"id": "neck_curls", "sets": [{"weight": 0, "reps": 20}, {"weight": 25, "reps": 18}, {"weight": 25, "reps": 16}]}
+      ]
+    },
+    {
+      "date": "2026-01-26",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 7}, {"weight": 50, "reps": 8}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 65, "reps": 10}]}
+      ]
+    },
+    {
+      "date": "2026-01-23",
+      "day": "Friday",
+      "exercises": [
+        {"id": "seated_db_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 70, "reps": 12}, {"weight": 70, "reps": 12}]},
+        {"id": "techno_lat_pull", "sets": [{"weight": 235, "reps": 9}, {"weight": 220, "reps": 9}, {"weight": 205, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2026-01-21",
+      "day": "Wednesday",
+      "exercises": [
+        {"id": "bulgarian_split_squat", "sets": [{"weight": 0, "reps": 12}, {"weight": 35, "reps": 12}, {"weight": 35, "reps": 12}]},
+        {"id": "pistol_squat", "sets": [{"weight": 0, "reps": 10}, {"weight": 0, "reps": 10}]},
+        {"id": "overhead_tricep_ext", "sets": [{"weight": 65, "reps": 12}, {"weight": 70, "reps": 12}, {"weight": 70, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2026-01-19",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 7}, {"weight": 50, "reps": 7}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2026-01-14",
+      "day": "Wednesday",
+      "exercises": [
+        {"id": "bulgarian_split_squat", "sets": [{"weight": 0, "reps": 12}, {"weight": 30, "reps": 12}, {"weight": 30, "reps": 12}]},
+        {"id": "overhead_tricep_ext", "sets": [{"weight": 65, "reps": 12}, {"weight": 65, "reps": 12}, {"weight": 65, "reps": 10}]}
+      ]
+    },
+    {
+      "date": "2026-01-12",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 8}, {"weight": 50, "reps": 8}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2026-01-05",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 7}, {"weight": 45, "reps": 10}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2025-12-29",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 6}, {"weight": 45, "reps": 8}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2025-12-01",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 60, "reps": 7}, {"weight": 45, "reps": 9}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2025-11-23",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 60, "reps": 7}, {"weight": 45, "reps": 9}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}, {"weight": 75, "reps": 10}]}
+      ]
+    },
+    {
+      "date": "2025-11-17",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 60, "reps": 7}, {"weight": 45, "reps": 9}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}, {"weight": 75, "reps": 10}]}
+      ]
+    },
+    {
+      "date": "2025-11-10",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 60, "reps": 7}, {"weight": 45, "reps": 9}]}
+      ]
+    },
+    {
+      "date": "2025-11-02",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 55, "reps": 8}, {"weight": 45, "reps": 9}]}
+      ]
+    },
+    {
+      "date": "2025-10-27",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 65, "reps": 8}, {"weight": 55, "reps": 7}, {"weight": 45, "reps": 8}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2025-10-20",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 65, "reps": 6}, {"weight": 50, "reps": 8}, {"weight": 40, "reps": 10}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2025-10-13",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 8}, {"weight": 50, "reps": 7}, {"weight": 40, "reps": 9}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 12}]}
+      ]
+    },
+    {
+      "date": "2025-10-06",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 7}, {"weight": 50, "reps": 7}, {"weight": 35, "reps": 10}]}
+      ]
+    },
+    {
+      "date": "2025-09-29",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 55, "reps": 8}, {"weight": 45, "reps": 8}, {"weight": 35, "reps": 8}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 10}]}
+      ]
+    },
+    {
+      "date": "2025-09-22",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 50, "reps": 8}, {"weight": 40, "reps": 10}, {"weight": 30, "reps": 10}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 10}, {"weight": 55, "reps": 10}]}
+      ]
+    },
+    {
+      "date": "2025-09-15",
+      "day": "Monday",
+      "exercises": [
+        {"id": "weighted_pullups", "sets": [{"weight": 45, "reps": 8}, {"weight": 35, "reps": 8}, {"weight": 25, "reps": 10}]},
+        {"id": "incline_chest_press", "sets": [{"weight": 70, "reps": 6}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 10}, {"weight": 55, "reps": 10}]}
+      ]
+    }
+  ],
+  "prs": {
+    "weighted_pullups": {"weight": 70, "reps": 7, "date": "2025-11-10", "estimated1RM": 84},
+    "techno_lat_pull": {"weight": 250, "reps": 7, "date": "2025-12-05", "estimated1RM": 292},
+    "seated_db_press": {"weight": 75, "reps": 12, "date": "2026-01-30", "estimated1RM": 107},
+    "bulgarian_split_squat": {"weight": 40, "reps": 12, "date": "2026-01-28", "estimated1RM": 57},
+    "neck_curls": {"weight": 25, "reps": 18, "date": "2026-02-02", "estimated1RM": 40},
+    "overhead_tricep_ext": {"weight": 75, "reps": 12, "date": "2026-01-28", "estimated1RM": 107}
+  }
+}
