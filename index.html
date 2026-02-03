@@ -255,38 +255,7 @@
             </div>
         </div>
 
-        <!-- Estimated 1RM Cards -->
-        <div class="card" style="margin-bottom: 24px;">
-            <div class="card-header">
-                <h2>💪 Estimated 1RM (Epley Formula)</h2>
-            </div>
-            <div class="grid-4" style="margin-bottom: 0;">
-                <div style="text-align: center; padding: 16px; background: var(--bg-tertiary); border-radius: 10px;">
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 4px;">Weighted Pull-up</div>
-                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--accent-blue);">84 lbs</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary);">+BW added</div>
-                    <div class="progress-bar"><div class="progress-fill blue" style="width: 70%;"></div></div>
-                </div>
-                <div style="text-align: center; padding: 16px; background: var(--bg-tertiary); border-radius: 10px;">
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 4px;">Lat Pull</div>
-                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange);">292 lbs</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary);">machine</div>
-                    <div class="progress-bar"><div class="progress-fill orange" style="width: 85%;"></div></div>
-                </div>
-                <div style="text-align: center; padding: 16px; background: var(--bg-tertiary); border-radius: 10px;">
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 4px;">Seated DB Press</div>
-                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--accent-green);">107 lbs</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary);">per arm</div>
-                    <div class="progress-bar"><div class="progress-fill green" style="width: 65%;"></div></div>
-                </div>
-                <div style="text-align: center; padding: 16px; background: var(--bg-tertiary); border-radius: 10px;">
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 4px;">Incline Press</div>
-                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--accent-purple);">100 lbs</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary);">per arm</div>
-                    <div class="progress-bar"><div class="progress-fill purple" style="width: 60%;"></div></div>
-                </div>
-            </div>
-        </div>
+        <!-- e1RM section removed -->
 
         <!-- Progress Charts -->
         <div class="grid-2">
@@ -320,15 +289,7 @@
                     <canvas id="bssChart"></canvas>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h2>📈 e1RM Progression</h2>
-                    <span class="trend up">All lifts trending up</span>
-                </div>
-                <div class="chart-wrapper">
-                    <canvas id="e1rmChart"></canvas>
-                </div>
-            </div>
+            <!-- e1RM chart removed -->
         </div>
 
         <!-- Days Since PR -->
@@ -377,7 +338,6 @@
                     </div>
                     <div class="values">
                         <div class="pr-value">70 lbs × 7</div>
-                        <div class="e1rm">~84 lb e1RM</div>
                     </div>
                 </div>
                 <div class="pr-item">
@@ -387,7 +347,6 @@
                     </div>
                     <div class="values">
                         <div class="pr-value">250 lbs × 7</div>
-                        <div class="e1rm">~292 lb e1RM</div>
                     </div>
                 </div>
                 <div class="pr-item">
@@ -397,7 +356,6 @@
                     </div>
                     <div class="values">
                         <div class="pr-value">75 lbs × 12</div>
-                        <div class="e1rm">~107 lb e1RM</div>
                     </div>
                 </div>
                 <div class="pr-item">
@@ -407,7 +365,6 @@
                     </div>
                     <div class="values">
                         <div class="pr-value">40 lbs × 12</div>
-                        <div class="e1rm">~57 lb e1RM</div>
                     </div>
                 </div>
                 <div class="pr-item">
@@ -417,7 +374,6 @@
                     </div>
                     <div class="values">
                         <div class="pr-value">75 lbs × 12</div>
-                        <div class="e1rm">~107 lb e1RM</div>
                     </div>
                 </div>
                 <div class="pr-item">
@@ -427,7 +383,6 @@
                     </div>
                     <div class="values">
                         <div class="pr-value">25 lbs × 18</div>
-                        <div class="e1rm">~40 lb e1RM</div>
                     </div>
                 </div>
             </div>
@@ -559,22 +514,7 @@
             options: {...chartDefaults, scales: {...chartDefaults.scales, y: {...chartDefaults.scales.y, min: 0, max: 50}}}
         });
 
-        // e1RM Trend Chart
-        new Chart(document.getElementById('e1rmChart'), {
-            type: 'line',
-            data: {
-                labels: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb'],
-                datasets: [
-                    { label: 'Pull-ups', data: [68, 78, 84, 80, 80], borderColor: '#58a6ff', tension: 0.3, pointRadius: 4 },
-                    { label: 'Lat Pull', data: [240, 270, 292, 285, 285], borderColor: '#f0883e', tension: 0.3, pointRadius: 4 },
-                    { label: 'DB Press', data: [95, 100, 102, 105, 107], borderColor: '#3fb950', tension: 0.3, pointRadius: 4 }
-                ]
-            },
-            options: {
-                ...chartDefaults,
-                plugins: { legend: { display: true, labels: { color: '#c9d1d9' } } }
-            }
-        });
+        // e1RM chart removed
 
         // Load and display all workouts
         fetch('workouts.json')
