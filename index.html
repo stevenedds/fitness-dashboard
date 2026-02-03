@@ -466,56 +466,18 @@
             </div>
         </div>
 
-        <!-- Recent Workouts -->
+        <!-- All Workouts -->
         <div class="card" style="margin-bottom: 24px;">
             <div class="card-header">
-                <h2>📜 Recent Workouts</h2>
+                <h2>📜 All Workouts</h2>
+                <span class="trend neutral" id="workout-count">Loading...</span>
             </div>
-            <div class="workout-log">
-                <div class="workout-entry">
-                    <div class="header">
-                        <span class="date">Monday, Feb 2</span>
-                        <span class="day-badge">Pull + Chest</span>
-                    </div>
-                    <div class="exercises">
-                        <span class="exercise-tag">Pull-ups: 60×8, 50×8</span>
-                        <span class="exercise-tag">Incline: 75×7, 70×9</span>
-                        <span class="exercise-tag">Machine Press: 200×8</span>
-                        <span class="exercise-tag pr">🏆 Neck: 25×18</span>
-                    </div>
-                </div>
-                <div class="workout-entry">
-                    <div class="header">
-                        <span class="date">Friday, Jan 30</span>
-                        <span class="day-badge">Shoulders + Back</span>
-                    </div>
-                    <div class="exercises">
-                        <span class="exercise-tag">DB Press: 75×12, 70×12</span>
-                        <span class="exercise-tag">Lat Pull: 235×7, 220×10</span>
-                        <span class="exercise-tag">Tricep Ext: 75×12</span>
-                        <span class="exercise-tag">Shrugs: 70×15</span>
-                    </div>
-                </div>
-                <div class="workout-entry">
-                    <div class="header">
-                        <span class="date">Wednesday, Jan 28</span>
-                        <span class="day-badge">Legs + Accessories</span>
-                    </div>
-                    <div class="exercises">
-                        <span class="exercise-tag pr">🏆 BSS: 40×12</span>
-                        <span class="exercise-tag">Pistols: BW×10</span>
-                        <span class="exercise-tag pr">🏆 Tricep: 75×12</span>
-                        <span class="exercise-tag">Neck: 25×18</span>
-                    </div>
-                </div>
+            <div class="workout-log" id="workout-log" style="max-height: 600px;">
+                <!-- Dynamically populated -->
             </div>
         </div>
 
-        <footer class="footer">
-            <p>Last updated: February 2, 2026</p>
-            <p>Weekly summaries every Sunday • Check-ins M/W/F at 2pm</p>
-            <p>Built with 💪 by <a href="https://github.com/stevenedds/gains">OpenClaw</a></p>
-        </footer>
+        <!-- Footer removed -->
     </div>
 
     <script>
@@ -613,6 +575,60 @@
                 plugins: { legend: { display: true, labels: { color: '#c9d1d9' } } }
             }
         });
+
+        // Load and display all workouts
+        fetch('workouts.json')
+            .then(r => r.json())
+            .then(data => {
+                const log = document.getElementById('workout-log');
+                const count = document.getElementById('workout-count');
+                const exercises = data.exercises;
+                const prs = data.prs;
+                
+                count.textContent = `${data.workouts.length} sessions`;
+                
+                const dayLabels = {
+                    'Monday': 'Pull + Chest',
+                    'Wednesday': 'Legs + Accessories', 
+                    'Friday': 'Shoulders + Back'
+                };
+                
+                const shortNames = {
+                    'weighted_pullups': 'Pull-ups',
+                    'incline_chest_press': 'Incline',
+                    'techno_lat_pull': 'Lat Pull',
+                    'seated_db_press': 'DB Press',
+                    'bulgarian_split_squat': 'BSS',
+                    'pistol_squat': 'Pistols',
+                    'neck_curls': 'Neck',
+                    'overhead_tricep_ext': 'Tricep Ext'
+                };
+                
+                data.workouts.forEach(w => {
+                    const date = new Date(w.date + 'T12:00:00');
+                    const formatted = date.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+                    
+                    let exerciseHtml = w.exercises.map(ex => {
+                        const name = shortNames[ex.id] || exercises[ex.id]?.name || ex.id;
+                        const sets = ex.sets.map(s => s.weight === 0 ? `BW×${s.reps}` : `${s.weight}×${s.reps}`).join(', ');
+                        
+                        // Check if this workout date matches a PR date for this exercise
+                        const pr = prs[ex.id];
+                        const isPR = pr && pr.date === w.date;
+                        
+                        return `<span class="exercise-tag${isPR ? ' pr' : ''}">${isPR ? '🏆 ' : ''}${name}: ${sets}</span>`;
+                    }).join('');
+                    
+                    log.innerHTML += `
+                        <div class="workout-entry">
+                            <div class="header">
+                                <span class="date">${formatted}</span>
+                                <span class="day-badge">${dayLabels[w.day] || w.day}</span>
+                            </div>
+                            <div class="exercises">${exerciseHtml}</div>
+                        </div>`;
+                });
+            });
     </script>
 </body>
 </html>
