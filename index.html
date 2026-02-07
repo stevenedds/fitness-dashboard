@@ -378,7 +378,7 @@
             <div class="muscle-grid">
                 <div class="muscle-chart">
                     <h3>By Muscle Group</h3>
-                    <div class="muscle-bars" id="muscle-bars"></div>
+                    <div class="chart-wrapper" style="height: 250px;"><canvas id="muscle-pie-chart"></canvas></div>
                 </div>
                 <div class="gauge-container">
                     <h3>Push / Pull Ratio</h3>
@@ -634,19 +634,47 @@
                     });
                 });
 
-                const muscleBars = document.getElementById('muscle-bars');
-                const maxMuscle = Math.max(...Object.values(muscleVolume));
                 const muscleColors = { Back: chartColors.green, Chest: chartColors.rust, Shoulders: chartColors.cyan, Triceps: chartColors.purple, Legs: chartColors.yellow, Neck: '#ff6b6b' };
-                Object.entries(muscleVolume).forEach(([muscle, vol]) => {
-                    const pct = (vol / maxMuscle * 100).toFixed(0);
-                    muscleBars.innerHTML += `
-                        <div class="muscle-bar-row">
-                            <div class="muscle-bar-label">${muscle}</div>
-                            <div class="muscle-bar-track">
-                                <div class="muscle-bar-fill" style="width: ${pct}%; background: ${muscleColors[muscle]};"></div>
-                                <div class="muscle-bar-value">${(vol/1000).toFixed(0)}K</div>
-                            </div>
-                        </div>`;
+                
+                // Pie chart for muscle distribution
+                const muscleLabels = Object.keys(muscleVolume);
+                const muscleData = Object.values(muscleVolume);
+                const muscleColorArray = muscleLabels.map(m => muscleColors[m]);
+                
+                new Chart(document.getElementById('muscle-pie-chart'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: muscleLabels,
+                        datasets: [{
+                            data: muscleData,
+                            backgroundColor: muscleColorArray,
+                            borderColor: '#0a0a0a',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    color: '#888',
+                                    font: { size: 11, family: "'JetBrains Mono', monospace" },
+                                    padding: 12
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        const pct = ((context.raw / total) * 100).toFixed(1);
+                                        return `${context.label}: ${(context.raw/1000).toFixed(0)}K lbs (${pct}%)`;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 });
 
                 // Push/Pull ratio
