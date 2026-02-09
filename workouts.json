@@ -1,319 +1,6802 @@
 {
-  "profile": {
-    "name": "Steven Edds",
-    "startDate": "2025-09-10",
-    "split": ["Monday: Pull/Chest", "Wednesday: Legs/Accessories", "Friday: Shoulders/Back"]
-  },
   "exercises": {
-    "weighted_pullups": {
+    "weighted_pull_ups": {
       "name": "Weighted Pull-ups",
-      "category": "back",
-      "unit": "lbs",
-      "trackPR": true
+      "muscle": "unknown"
     },
     "incline_chest_press": {
-      "name": "Incline Chest Press (DB)",
-      "category": "chest",
-      "unit": "lbs",
-      "trackPR": true
+      "name": "Incline chest press",
+      "muscle": "unknown"
     },
-    "techno_lat_pull": {
-      "name": "TechnoGym Lat Pull",
-      "category": "back",
-      "unit": "lbs",
-      "trackPR": true
+    "techno_gym_machine_chest_press_press": {
+      "name": "Techno gym machine chest press Press",
+      "muscle": "unknown"
     },
-    "seated_db_press": {
-      "name": "Seated DB Press",
-      "category": "shoulders",
-      "unit": "lbs",
-      "trackPR": true
+    "seated_incline_bicep_curls": {
+      "name": "Seated Incline Bicep Curls",
+      "muscle": "unknown"
     },
-    "bulgarian_split_squat": {
-      "name": "Bulgarian Split Squat",
-      "category": "legs",
-      "unit": "lbs",
-      "trackPR": true
-    },
-    "pistol_squat": {
-      "name": "Pistol Squats",
-      "category": "legs",
-      "unit": "bw",
-      "trackPR": false
+    "seated_incline_delt_raises": {
+      "name": "Seated incline Delt raises",
+      "muscle": "unknown"
     },
     "neck_curls": {
       "name": "Neck Curls",
-      "category": "neck",
-      "unit": "lbs",
-      "trackPR": true
+      "muscle": "unknown"
     },
     "reverse_neck_curls": {
-      "name": "Reverse Neck Curls",
-      "category": "neck",
-      "unit": "lbs",
-      "trackPR": true
+      "name": "Reverse Neck curls",
+      "muscle": "unknown"
     },
-    "overhead_tricep_ext": {
+    "seated_dumbbell_press": {
+      "name": "Seated dumbbell press",
+      "muscle": "unknown"
+    },
+    "techno_gym_lat_pull": {
+      "name": "Techno gym lat pull",
+      "muscle": "unknown"
+    },
+    "overhead_cable_tricep_extensions": {
       "name": "Overhead Cable Tricep Extensions",
-      "category": "triceps",
-      "unit": "lbs",
-      "trackPR": true
-    },
-    "cable_lat_raises": {
-      "name": "Cable Lat Raises",
-      "category": "shoulders",
-      "unit": "lbs",
-      "trackPR": true
-    },
-    "reverse_shoulder_flys": {
-      "name": "Reverse Shoulder Cable Flys",
-      "category": "shoulders",
-      "unit": "lbs",
-      "trackPR": true
-    },
-    "single_arm_shrug": {
-      "name": "Single Arm Shrug",
-      "category": "traps",
-      "unit": "lbs",
-      "trackPR": true
-    },
-    "incline_delt_raises": {
-      "name": "Seated Incline Delt Raises",
-      "category": "shoulders",
-      "unit": "lbs",
-      "trackPR": true
+      "muscle": "unknown"
     },
     "db_shrugs": {
       "name": "DB Shrugs",
-      "category": "traps",
-      "unit": "lbs",
-      "trackPR": true
+      "muscle": "unknown"
+    },
+    "bulgarian_split_squat": {
+      "name": "Bulgarian Split Squat",
+      "muscle": "unknown"
+    },
+    "pistol_squats": {
+      "name": "Pistol Squats",
+      "muscle": "unknown"
+    },
+    "cable_lat_raises": {
+      "name": "Cable Lat Raises",
+      "muscle": "unknown"
+    },
+    "reverse_shoulder_cable_flys": {
+      "name": "Reverse Shoulder Cable Flys",
+      "muscle": "unknown"
+    },
+    "single_arm_shrug": {
+      "name": "Single Arm Shrug",
+      "muscle": "unknown"
+    },
+    "60_x_almost_8": {
+      "name": "60 x almost 8",
+      "muscle": "unknown"
+    },
+    "cable_bar_tricep_extension": {
+      "name": "Cable bar tricep extension",
+      "muscle": "unknown"
+    },
+    "cable_lateral_raises": {
+      "name": "Cable Lateral Raises",
+      "muscle": "unknown"
+    },
+    "pull_ups": {
+      "name": "Pull-ups",
+      "muscle": "unknown"
+    },
+    "cable_lat_raise": {
+      "name": "Cable lat raise",
+      "muscle": "unknown"
+    },
+    "prone_leg_curls_at_wolfe": {
+      "name": "Prone leg curls at Wolfe",
+      "muscle": "unknown"
+    },
+    "leg_extensions": {
+      "name": "Leg extensions",
+      "muscle": "unknown"
+    },
+    "seated_smith_machine_press": {
+      "name": "Seated Smith Machine Press",
+      "muscle": "unknown"
+    },
+    "technogym_leg_extensions": {
+      "name": "TechnoGym Leg Extensions",
+      "muscle": "unknown"
+    },
+    "dumbbell_rdls_slow_with_great_form": {
+      "name": "Dumbbell RDLs slow with great form",
+      "muscle": "unknown"
+    },
+    "seated_tricep_extension": {
+      "name": "Seated tricep extension",
+      "muscle": "unknown"
+    },
+    "cable_lateral_raisea": {
+      "name": "Cable Lateral Raisea",
+      "muscle": "unknown"
+    },
+    "technogym_leg_curls": {
+      "name": "TechnoGym Leg Curls",
+      "muscle": "unknown"
+    },
+    "seated_arnold_press": {
+      "name": "Seated Arnold Press",
+      "muscle": "unknown"
+    },
+    "cable_face_pulls": {
+      "name": "Cable Face Pulls",
+      "muscle": "unknown"
+    },
+    "seated_db_press": {
+      "name": "Seated DB Press",
+      "muscle": "unknown"
+    },
+    "jeff_nipard_cable_curls": {
+      "name": "Jeff Nipard Cable Curls",
+      "muscle": "unknown"
+    },
+    "15_power_mode_x_10": {
+      "name": "15 power mode x 10",
+      "muscle": "unknown"
+    },
+    "romanian_deadlifts": {
+      "name": "Romanian Deadlifts",
+      "muscle": "unknown"
+    },
+    "parallel_chin_ups": {
+      "name": "Parallel Chin-ups",
+      "muscle": "unknown"
+    },
+    "narrow_grip_incline_dumbbell_press": {
+      "name": "Narrow Grip Incline Dumbbell Press",
+      "muscle": "unknown"
+    },
+    "smith_machine_overhead_press": {
+      "name": "Smith Machine Overhead Press",
+      "muscle": "unknown"
+    },
+    "machine_leg_extensions": {
+      "name": "Machine Leg Extensions",
+      "muscle": "unknown"
+    },
+    "machine_leg_curls": {
+      "name": "Machine Leg Curls",
+      "muscle": "unknown"
+    },
+    "one_arm_dumbbell_rows": {
+      "name": "One-Arm Dumbbell Rows",
+      "muscle": "unknown"
+    },
+    "arnold_press": {
+      "name": "Arnold Press",
+      "muscle": "unknown"
+    }
+  },
+  "prs": {
+    "romanian_deadlifts": {
+      "weight": 75.0,
+      "reps": 12,
+      "date": "2025-09-10"
+    },
+    "single_arm_shrug": {
+      "weight": 75.0,
+      "reps": 15,
+      "date": "2025-09-10"
+    },
+    "parallel_chin_ups": {
+      "weight": 70.0,
+      "reps": 6,
+      "date": "2025-11-05"
+    },
+    "reverse_shoulder_cable_flys": {
+      "weight": 20.0,
+      "reps": 10,
+      "date": "2025-09-10"
+    },
+    "neck_curls": {
+      "weight": 25.0,
+      "reps": 12,
+      "date": "2026-01-14"
+    },
+    "reverse_neck_curls": {
+      "weight": 25.0,
+      "reps": 12,
+      "date": "2026-01-14"
+    },
+    "smith_machine_overhead_press": {
+      "weight": 60.0,
+      "reps": 6,
+      "date": "2025-09-19"
+    },
+    "one_arm_dumbbell_rows": {
+      "weight": 75.0,
+      "reps": 12,
+      "date": "2025-09-12"
+    },
+    "arnold_press": {
+      "weight": 35.0,
+      "reps": 12,
+      "date": "2025-09-12"
+    },
+    "cable_lateral_raises": {
+      "weight": 20.0,
+      "reps": 4,
+      "date": "2025-09-19"
+    },
+    "weighted_pull_ups": {
+      "weight": 70.0,
+      "reps": 7,
+      "date": "2025-11-02"
+    },
+    "narrow_grip_incline_dumbbell_press": {
+      "weight": 75.0,
+      "reps": 6,
+      "date": "2025-09-29"
+    },
+    "jeff_nipard_cable_curls": {
+      "weight": 40.0,
+      "reps": 7,
+      "date": "2025-09-15"
+    },
+    "cable_face_pulls": {
+      "weight": 20.0,
+      "reps": 12,
+      "date": "2025-09-15"
+    },
+    "machine_leg_extensions": {
+      "weight": 60.0,
+      "reps": 12,
+      "date": "2025-09-17"
+    },
+    "machine_leg_curls": {
+      "weight": 100.0,
+      "reps": 12,
+      "date": "2025-09-17"
+    },
+    "techno_gym_lat_pull": {
+      "weight": 250.0,
+      "reps": 5,
+      "date": "2025-11-14"
+    },
+    "seated_arnold_press": {
+      "weight": 45.0,
+      "reps": 12,
+      "date": "2025-09-26"
+    },
+    "15_power_mode_x_10": {
+      "weight": 15.0,
+      "reps": 12,
+      "date": "2025-09-19"
+    },
+    "seated_db_press": {
+      "weight": 75.0,
+      "reps": 10,
+      "date": "2025-09-26"
+    },
+    "db_shrugs": {
+      "weight": 70.0,
+      "reps": 12,
+      "date": "2025-09-26"
+    },
+    "techno_gym_machine_chest_press_press": {
+      "weight": 205.0,
+      "reps": 8,
+      "date": "2025-11-23"
+    },
+    "technogym_leg_extensions": {
+      "weight": 130.0,
+      "reps": 9,
+      "date": "2025-11-26"
+    },
+    "technogym_leg_curls": {
+      "weight": 100.0,
+      "reps": 12,
+      "date": "2025-11-26"
+    },
+    "overhead_cable_tricep_extensions": {
+      "weight": 75.0,
+      "reps": 12,
+      "date": "2026-01-28"
+    },
+    "seated_smith_machine_press": {
+      "weight": 62.5,
+      "reps": 8,
+      "date": "2025-11-28"
+    },
+    "incline_chest_press": {
+      "weight": 75.0,
+      "reps": 12,
+      "date": "2025-11-17"
+    },
+    "seated_incline_bicep_curls": {
+      "weight": 45.0,
+      "reps": 10,
+      "date": "2025-11-17"
+    },
+    "seated_tricep_extension": {
+      "weight": 35.0,
+      "reps": 12,
+      "date": "2025-11-17"
+    },
+    "seated_incline_delt_raises": {
+      "weight": 30.0,
+      "reps": 6,
+      "date": "2026-01-30"
+    },
+    "cable_lateral_raisea": {
+      "weight": 20.0,
+      "reps": 5,
+      "date": "2025-11-21"
+    },
+    "dumbbell_rdls_slow_with_great_form": {
+      "weight": 30.0,
+      "reps": 12,
+      "date": "2025-12-03"
+    },
+    "cable_lat_raise": {
+      "weight": 15.0,
+      "reps": 10,
+      "date": "2025-12-22"
+    },
+    "prone_leg_curls_at_wolfe": {
+      "weight": 120.0,
+      "reps": 8,
+      "date": "2025-12-22"
+    },
+    "leg_extensions": {
+      "weight": 240.0,
+      "reps": 10,
+      "date": "2025-12-22"
+    },
+    "seated_dumbbell_press": {
+      "weight": 75.0,
+      "reps": 10,
+      "date": "2026-01-02"
+    },
+    "cable_bar_tricep_extension": {
+      "weight": 60.0,
+      "reps": 12,
+      "date": "2025-12-29"
+    },
+    "bulgarian_split_squat": {
+      "weight": 40.0,
+      "reps": 12,
+      "date": "2026-01-28"
+    },
+    "cable_lat_raises": {
+      "weight": 20.0,
+      "reps": 5,
+      "date": "2025-12-31"
+    },
+    "60_x_almost_8": {
+      "weight": 50.0,
+      "reps": 8,
+      "date": "2026-01-26"
     }
   },
   "workouts": [
     {
-      "date": "2026-02-06",
-      "day": "Friday",
-      "exercises": [
-        {"id": "seated_db_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]},
-        {"id": "techno_lat_pull", "sets": [{"weight": 235, "reps": 8}, {"weight": 225, "reps": 9}]},
-        {"id": "overhead_tricep_ext", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]},
-        {"id": "incline_delt_raises", "sets": [{"weight": 30, "reps": 8}, {"weight": 30, "reps": 6}, {"weight": 25, "reps": 12}]},
-        {"id": "db_shrugs", "sets": [{"weight": 75, "reps": 15}, {"weight": 75, "reps": 15}]}
-      ]
-    },
-    {
-      "date": "2026-02-04",
-      "day": "Wednesday",
-      "exercises": [
-        {"id": "bulgarian_split_squat", "sets": [{"weight": 0, "reps": 12}, {"weight": 45, "reps": 12}, {"weight": 45, "reps": 10}]},
-        {"id": "pistol_squat", "sets": [{"weight": 0, "reps": 10}, {"weight": 0, "reps": 10}]},
-        {"id": "overhead_tricep_ext", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 11}]},
-        {"id": "cable_lat_raises", "sets": [{"weight": 20, "reps": 9}, {"weight": 20, "reps": 8}, {"weight": 15, "reps": 12}]},
-        {"id": "reverse_shoulder_flys", "sets": [{"weight": 15, "reps": 12}, {"weight": 20, "reps": 12}, {"weight": 20, "reps": 12}]},
-        {"id": "single_arm_shrug", "sets": [{"weight": 75, "reps": 15}, {"weight": 75, "reps": 15}]},
-        {"id": "neck_curls", "sets": [{"weight": 0, "reps": 20}, {"weight": 25, "reps": 18}, {"weight": 25, "reps": 16}]},
-        {"id": "reverse_neck_curls", "sets": [{"weight": 0, "reps": 20}, {"weight": 25, "reps": 18}, {"weight": 25, "reps": 16}]}
-      ]
-    },
-    {
       "date": "2026-02-02",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 8}, {"weight": 50, "reps": 8}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 7}, {"weight": 70, "reps": 9}]},
-        {"id": "neck_curls", "sets": [{"weight": 0, "reps": 20}, {"weight": 25, "reps": 18}, {"weight": 25, "reps": 14}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 7
+            },
+            {
+              "weight": 70.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 200.0,
+              "reps": 8
+            },
+            {
+              "weight": 190.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_bicep_curls",
+          "name": "Seated Incline Bicep Curls",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 10
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 30.0,
+              "reps": 7
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 18
+            },
+            {
+              "weight": 25.0,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 18
+            },
+            {
+              "weight": 25.0,
+              "reps": 14
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-30",
       "day": "Friday",
       "exercises": [
-        {"id": "seated_db_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 70, "reps": 12}, {"weight": 70, "reps": 12}]},
-        {"id": "techno_lat_pull", "sets": [{"weight": 235, "reps": 7}, {"weight": 220, "reps": 10}]}
+        {
+          "id": "seated_dumbbell_press",
+          "name": "Seated dumbbell press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 235.0,
+              "reps": 7
+            },
+            {
+              "weight": 220.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 30.0,
+              "reps": 6
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-28",
       "day": "Wednesday",
       "exercises": [
-        {"id": "bulgarian_split_squat", "sets": [{"weight": 0, "reps": 12}, {"weight": 40, "reps": 12}, {"weight": 40, "reps": 12}]},
-        {"id": "pistol_squat", "sets": [{"weight": 0, "reps": 10}, {"weight": 0, "reps": 10}]},
-        {"id": "overhead_tricep_ext", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 10}]},
-        {"id": "neck_curls", "sets": [{"weight": 0, "reps": 20}, {"weight": 25, "reps": 18}, {"weight": 25, "reps": 16}]}
+        {
+          "id": "bulgarian_split_squat",
+          "name": "Bulgarian Split Squat",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "pistol_squats",
+          "name": "Pistol Squats",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 10
+            },
+            {
+              "weight": 0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lat_raises",
+          "name": "Cable Lat Raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 9
+            },
+            {
+              "weight": 20.0,
+              "reps": 8
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 18
+            },
+            {
+              "weight": 25.0,
+              "reps": 16
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 18
+            },
+            {
+              "weight": 25.0,
+              "reps": 16
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-26",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 7}, {"weight": 50, "reps": 8}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 65, "reps": 10}]}
+        {
+          "id": "60_x_almost_8",
+          "name": "60 x almost 8",
+          "sets": [
+            {
+              "weight": 50.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 6
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 195.0,
+              "reps": 10
+            },
+            {
+              "weight": 185.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 15
+            },
+            {
+              "weight": 25.0,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 15
+            },
+            {
+              "weight": 25.0,
+              "reps": 14
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-23",
       "day": "Friday",
       "exercises": [
-        {"id": "seated_db_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 70, "reps": 12}, {"weight": 70, "reps": 12}]},
-        {"id": "techno_lat_pull", "sets": [{"weight": 235, "reps": 9}, {"weight": 220, "reps": 9}, {"weight": 205, "reps": 12}]}
+        {
+          "id": "seated_dumbbell_press",
+          "name": "Seated dumbbell press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 235.0,
+              "reps": 9
+            },
+            {
+              "weight": 220.0,
+              "reps": 9
+            },
+            {
+              "weight": 205.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 25.0,
+              "reps": 11
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-21",
       "day": "Wednesday",
       "exercises": [
-        {"id": "bulgarian_split_squat", "sets": [{"weight": 0, "reps": 12}, {"weight": 35, "reps": 12}, {"weight": 35, "reps": 12}]},
-        {"id": "pistol_squat", "sets": [{"weight": 0, "reps": 10}, {"weight": 0, "reps": 10}]},
-        {"id": "overhead_tricep_ext", "sets": [{"weight": 65, "reps": 12}, {"weight": 70, "reps": 12}, {"weight": 70, "reps": 12}]}
+        {
+          "id": "bulgarian_split_squat",
+          "name": "Bulgarian Split Squat",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "pistol_squats",
+          "name": "Pistol Squats",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 10
+            },
+            {
+              "weight": 0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lat_raises",
+          "name": "Cable Lat Raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 8
+            },
+            {
+              "weight": 20.0,
+              "reps": 7
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 18
+            },
+            {
+              "weight": 25.0,
+              "reps": 16
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 18
+            },
+            {
+              "weight": 25.0,
+              "reps": 16
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-19",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 7}, {"weight": 50, "reps": 7}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 7
+            },
+            {
+              "weight": 50.0,
+              "reps": 7
+            }
+          ]
+        },
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 195.0,
+              "reps": 9
+            },
+            {
+              "weight": 185.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 15
+            },
+            {
+              "weight": 25.0,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 15
+            },
+            {
+              "weight": 25.0,
+              "reps": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-16",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_dumbbell_press",
+          "name": "Seated dumbbell press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 11
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 235.0,
+              "reps": 7
+            },
+            {
+              "weight": 215.0,
+              "reps": 10
+            },
+            {
+              "weight": 205.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-14",
       "day": "Wednesday",
       "exercises": [
-        {"id": "bulgarian_split_squat", "sets": [{"weight": 0, "reps": 12}, {"weight": 30, "reps": 12}, {"weight": 30, "reps": 12}]},
-        {"id": "overhead_tricep_ext", "sets": [{"weight": 65, "reps": 12}, {"weight": 65, "reps": 12}, {"weight": 65, "reps": 10}]}
+        {
+          "id": "bulgarian_split_squat",
+          "name": "Bulgarian Split Squat",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 12
+            },
+            {
+              "weight": 30.0,
+              "reps": 12
+            },
+            {
+              "weight": 30.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "pistol_squats",
+          "name": "Pistol Squats",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 10
+            },
+            {
+              "weight": 0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lat_raises",
+          "name": "Cable Lat Raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 8
+            },
+            {
+              "weight": 20.0,
+              "reps": 6
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 12
+            },
+            {
+              "weight": 25.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 25.0,
+              "reps": 12
+            },
+            {
+              "weight": 25.0,
+              "reps": 12
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-12",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 8}, {"weight": 50, "reps": 8}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 195.0,
+              "reps": 8
+            },
+            {
+              "weight": 185.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 25.0,
+              "reps": 9
+            },
+            {
+              "weight": 25.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-09",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_dumbbell_press",
+          "name": "Seated dumbbell press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 230.0,
+              "reps": 8
+            },
+            {
+              "weight": 215.0,
+              "reps": 9
+            },
+            {
+              "weight": 205.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 25.0,
+              "reps": 8
+            },
+            {
+              "weight": 25.0,
+              "reps": 8
+            },
+            {
+              "weight": 25.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-07",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "bulgarian_split_squat",
+          "name": "Bulgarian Split Squat",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "pistol_squats",
+          "name": "Pistol Squats",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 8
+            },
+            {
+              "weight": 0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 8
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lat_raises",
+          "name": "Cable Lat Raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 6
+            },
+            {
+              "weight": 20.0,
+              "reps": 6
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2026-01-05",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 7}, {"weight": 45, "reps": 10}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 7
+            },
+            {
+              "weight": 45.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 195.0,
+              "reps": 7
+            },
+            {
+              "weight": 180.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-02",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_dumbbell_press",
+          "name": "Seated dumbbell press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "weight": 75.0,
+              "reps": 8
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 230.0,
+              "reps": 8
+            },
+            {
+              "weight": 215.0,
+              "reps": 9
+            },
+            {
+              "weight": 200.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-31",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "bulgarian_split_squat",
+          "name": "Bulgarian Split Squat",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "pistol_squats",
+          "name": "Pistol Squats",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 8
+            },
+            {
+              "weight": 0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lat_raises",
+          "name": "Cable Lat Raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 5
+            },
+            {
+              "weight": 20.0,
+              "reps": 6
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 15
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-12-29",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 6}, {"weight": 45, "reps": 8}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 6
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 190.0,
+              "reps": 8
+            },
+            {
+              "weight": 180.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_bicep_curls",
+          "name": "Seated Incline Bicep Curls",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 10
+            },
+            {
+              "weight": 45.0,
+              "reps": 7
+            }
+          ]
+        },
+        {
+          "id": "cable_bar_tricep_extension",
+          "name": "Cable bar tricep extension",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-26",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_dumbbell_press",
+          "name": "Seated dumbbell press",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 220.0,
+              "reps": 8
+            },
+            {
+              "weight": 210.0,
+              "reps": 10
+            },
+            {
+              "weight": 200.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-22",
+      "day": "Monday",
+      "exercises": [
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "pull_ups",
+          "name": "Pull-ups",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 10
+            },
+            {
+              "weight": 0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lat_raise",
+          "name": "Cable lat raise",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "prone_leg_curls_at_wolfe",
+          "name": "Prone leg curls at Wolfe",
+          "sets": [
+            {
+              "weight": 120.0,
+              "reps": 8
+            },
+            {
+              "weight": 120.0,
+              "reps": 8
+            },
+            {
+              "weight": 100.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "leg_extensions",
+          "name": "Leg extensions",
+          "sets": [
+            {
+              "weight": 240.0,
+              "reps": 10
+            },
+            {
+              "weight": 240.0,
+              "reps": 10
+            },
+            {
+              "weight": 240.0,
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-05",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_smith_machine_press",
+          "name": "Seated Smith Machine Press",
+          "sets": [
+            {
+              "weight": 62.5,
+              "reps": 8
+            },
+            {
+              "weight": 57.5,
+              "reps": 9
+            },
+            {
+              "weight": 55.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 250.0,
+              "reps": 7
+            },
+            {
+              "weight": 230.0,
+              "reps": 10
+            },
+            {
+              "weight": 215.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 7
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-03",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "technogym_leg_extensions",
+          "name": "TechnoGym Leg Extensions",
+          "sets": [
+            {
+              "weight": 130.0,
+              "reps": 10
+            },
+            {
+              "weight": 120.0,
+              "reps": 9
+            },
+            {
+              "weight": 110.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "dumbbell_rdls_slow_with_great_form",
+          "name": "Dumbbell RDLs slow with great form",
+          "sets": [
+            {
+              "weight": 30.0,
+              "reps": 12
+            },
+            {
+              "weight": 30.0,
+              "reps": 12
+            },
+            {
+              "weight": 30.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-12-01",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 60, "reps": 7}, {"weight": 45, "reps": 9}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}]}
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 205.0,
+              "reps": 7
+            },
+            {
+              "weight": 190.0,
+              "reps": 9
+            },
+            {
+              "weight": 170.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_bicep_curls",
+          "name": "Seated Incline Bicep Curls",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 10
+            },
+            {
+              "weight": 45.0,
+              "reps": 10
+            },
+            {
+              "weight": 45.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "seated_tricep_extension",
+          "name": "Seated tricep extension",
+          "sets": [
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 11
+            },
+            {
+              "weight": 20.0,
+              "reps": 11
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-28",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_smith_machine_press",
+          "name": "Seated Smith Machine Press",
+          "sets": [
+            {
+              "weight": 62.5,
+              "reps": 8
+            },
+            {
+              "weight": 57.5,
+              "reps": 8
+            },
+            {
+              "weight": 52.5,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 250.0,
+              "reps": 7
+            },
+            {
+              "weight": 230.0,
+              "reps": 8
+            },
+            {
+              "weight": 215.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raisea",
+          "name": "Cable Lateral Raisea",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 6
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-26",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "technogym_leg_extensions",
+          "name": "TechnoGym Leg Extensions",
+          "sets": [
+            {
+              "weight": 130.0,
+              "reps": 9
+            },
+            {
+              "weight": 120.0,
+              "reps": 9
+            },
+            {
+              "weight": 110.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "technogym_leg_curls",
+          "name": "TechnoGym Leg Curls",
+          "sets": [
+            {
+              "weight": 100.0,
+              "reps": 12
+            },
+            {
+              "weight": 100.0,
+              "reps": 12
+            },
+            {
+              "weight": 100.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-11-23",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 60, "reps": 7}, {"weight": 45, "reps": 9}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}, {"weight": 75, "reps": 10}]}
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 205.0,
+              "reps": 8
+            },
+            {
+              "weight": 190.0,
+              "reps": 9
+            },
+            {
+              "weight": 170.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_bicep_curls",
+          "name": "Seated Incline Bicep Curls",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 10
+            },
+            {
+              "weight": 45.0,
+              "reps": 10
+            },
+            {
+              "weight": 45.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "seated_tricep_extension",
+          "name": "Seated tricep extension",
+          "sets": [
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 10
+            },
+            {
+              "weight": 20.0,
+              "reps": 10
+            },
+            {
+              "weight": 20.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-21",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_smith_machine_press",
+          "name": "Seated Smith Machine Press",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 7
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 250.0,
+              "reps": 7
+            },
+            {
+              "weight": 230.0,
+              "reps": 8
+            },
+            {
+              "weight": 215.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raisea",
+          "name": "Cable Lateral Raisea",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 5
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-19",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "technogym_leg_extensions",
+          "name": "TechnoGym Leg Extensions",
+          "sets": [
+            {
+              "weight": 105.0,
+              "reps": 10
+            },
+            {
+              "weight": 120.0,
+              "reps": 8
+            },
+            {
+              "weight": 110.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "technogym_leg_curls",
+          "name": "TechnoGym Leg Curls",
+          "sets": [
+            {
+              "weight": 90.0,
+              "reps": 12
+            },
+            {
+              "weight": 90.0,
+              "reps": 12
+            },
+            {
+              "weight": 90.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-11-17",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 60, "reps": 7}, {"weight": 45, "reps": 9}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 12}, {"weight": 75, "reps": 12}, {"weight": 75, "reps": 10}]}
+        {
+          "id": "incline_chest_press",
+          "name": "Incline chest press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 200.0,
+              "reps": 8
+            },
+            {
+              "weight": 185.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_bicep_curls",
+          "name": "Seated Incline Bicep Curls",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 10
+            },
+            {
+              "weight": 45.0,
+              "reps": 9
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "seated_tricep_extension",
+          "name": "Seated tricep extension",
+          "sets": [
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_incline_delt_raises",
+          "name": "Seated incline Delt raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-14",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_smith_machine_press",
+          "name": "Seated Smith Machine Press",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 6
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 250.0,
+              "reps": 5
+            },
+            {
+              "weight": 230.0,
+              "reps": 7
+            },
+            {
+              "weight": 210.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-12",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "technogym_leg_extensions",
+          "name": "TechnoGym Leg Extensions",
+          "sets": [
+            {
+              "weight": 80.0,
+              "reps": 12
+            },
+            {
+              "weight": 90.0,
+              "reps": 12
+            },
+            {
+              "weight": 90.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "technogym_leg_curls",
+          "name": "TechnoGym Leg Curls",
+          "sets": [
+            {
+              "weight": 80.0,
+              "reps": 12
+            },
+            {
+              "weight": 80.0,
+              "reps": 12
+            },
+            {
+              "weight": 80.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "overhead_cable_tricep_extensions",
+          "name": "Overhead Cable Tricep Extensions",
+          "sets": [
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-11-10",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 60, "reps": 7}, {"weight": 45, "reps": 9}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 7
+            },
+            {
+              "weight": 60.0,
+              "reps": 7
+            },
+            {
+              "weight": 45.0,
+              "reps": 9
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 200.0,
+              "reps": 8
+            },
+            {
+              "weight": 180.0,
+              "reps": 8
+            },
+            {
+              "weight": 160.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-07",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_db_press",
+          "name": "Seated DB Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 230.0,
+              "reps": 8
+            },
+            {
+              "weight": 220.0,
+              "reps": 10
+            },
+            {
+              "weight": 210.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "jeff_nipard_cable_curls",
+          "name": "Jeff Nipard Cable Curls",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "15_power_mode_x_10",
+          "name": "15 power mode x 10",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-05",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "romanian_deadlifts",
+          "name": "Romanian Deadlifts",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 6
+            },
+            {
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-11-02",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 70, "reps": 7}, {"weight": 55, "reps": 8}, {"weight": 45, "reps": 9}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 7
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 45.0,
+              "reps": 9
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_machine_chest_press_press",
+          "name": "Techno gym machine chest press Press",
+          "sets": [
+            {
+              "weight": 160.0,
+              "reps": 12
+            },
+            {
+              "weight": 160.0,
+              "reps": 10
+            },
+            {
+              "weight": 160.0,
+              "reps": 10
+            },
+            {
+              "weight": 160.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-31",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_db_press",
+          "name": "Seated DB Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 220.0,
+              "reps": 10
+            },
+            {
+              "weight": 210.0,
+              "reps": 10
+            },
+            {
+              "weight": 200.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "jeff_nipard_cable_curls",
+          "name": "Jeff Nipard Cable Curls",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "15_power_mode_x_10",
+          "name": "15 power mode x 10",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-29",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "romanian_deadlifts",
+          "name": "Romanian Deadlifts",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 8
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 15
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-10-27",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 65, "reps": 8}, {"weight": 55, "reps": 7}, {"weight": 45, "reps": 8}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 12}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 8
+            },
+            {
+              "weight": 55.0,
+              "reps": 7
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "narrow_grip_incline_dumbbell_press",
+          "name": "Narrow Grip Incline Dumbbell Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 6
+            },
+            {
+              "weight": 70.0,
+              "reps": 8
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-24",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_db_press",
+          "name": "Seated DB Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 11
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 220.0,
+              "reps": 10
+            },
+            {
+              "weight": 210.0,
+              "reps": 10
+            },
+            {
+              "weight": 200.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "jeff_nipard_cable_curls",
+          "name": "Jeff Nipard Cable Curls",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "15_power_mode_x_10",
+          "name": "15 power mode x 10",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-22",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "romanian_deadlifts",
+          "name": "Romanian Deadlifts",
+          "sets": [
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 8
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-10-20",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 65, "reps": 6}, {"weight": 50, "reps": 8}, {"weight": 40, "reps": 10}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 12}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 65.0,
+              "reps": 6
+            },
+            {
+              "weight": 50.0,
+              "reps": 8
+            },
+            {
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "narrow_grip_incline_dumbbell_press",
+          "name": "Narrow Grip Incline Dumbbell Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 6
+            },
+            {
+              "weight": 70.0,
+              "reps": 8
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-17",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_db_press",
+          "name": "Seated DB Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 220.0,
+              "reps": 10
+            },
+            {
+              "weight": 210.0,
+              "reps": 10
+            },
+            {
+              "weight": 200.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "jeff_nipard_cable_curls",
+          "name": "Jeff Nipard Cable Curls",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "15_power_mode_x_10",
+          "name": "15 power mode x 10",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            },
+            {
+              "weight": 70.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-15",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "romanian_deadlifts",
+          "name": "Romanian Deadlifts",
+          "sets": [
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 5
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-10-13",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 8}, {"weight": 50, "reps": 7}, {"weight": 40, "reps": 9}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 12}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 7
+            },
+            {
+              "weight": 40.0,
+              "reps": 9
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "narrow_grip_incline_dumbbell_press",
+          "name": "Narrow Grip Incline Dumbbell Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 6
+            },
+            {
+              "weight": 70.0,
+              "reps": 8
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-10",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_db_press",
+          "name": "Seated DB Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 8
+            },
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 220.0,
+              "reps": 8
+            },
+            {
+              "weight": 200.0,
+              "reps": 12
+            },
+            {
+              "weight": 190.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "jeff_nipard_cable_curls",
+          "name": "Jeff Nipard Cable Curls",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "15_power_mode_x_10",
+          "name": "15 power mode x 10",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-08",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "romanian_deadlifts",
+          "name": "Romanian Deadlifts",
+          "sets": [
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "weight": 55.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 7
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 11
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-10-06",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 60, "reps": 7}, {"weight": 50, "reps": 7}, {"weight": 35, "reps": 10}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 7
+            },
+            {
+              "weight": 50.0,
+              "reps": 7
+            },
+            {
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "narrow_grip_incline_dumbbell_press",
+          "name": "Narrow Grip Incline Dumbbell Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 6
+            },
+            {
+              "weight": 70.0,
+              "reps": 8
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-03",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_db_press",
+          "name": "Seated DB Press",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 11
+            },
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 12
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 210.0,
+              "reps": 10
+            },
+            {
+              "weight": 200.0,
+              "reps": 12
+            },
+            {
+              "weight": 190.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "15_power_mode_x_10",
+          "name": "15 power mode x 10",
+          "sets": [
+            {
+              "weight": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-01",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "romanian_deadlifts",
+          "name": "Romanian Deadlifts",
+          "sets": [
+            {
+              "weight": 50.0,
+              "reps": 12
+            },
+            {
+              "weight": 50.0,
+              "reps": 12
+            },
+            {
+              "weight": 50.0,
+              "reps": 12
+            },
+            {
+              "weight": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "weight": 55.0,
+              "reps": 7
+            },
+            {
+              "weight": 50.0,
+              "reps": 7
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 8
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            },
+            {
+              "weight": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-09-29",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 55, "reps": 8}, {"weight": 45, "reps": 8}, {"weight": 35, "reps": 8}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 75, "reps": 6}, {"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 10}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 8
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "narrow_grip_incline_dumbbell_press",
+          "name": "Narrow Grip Incline Dumbbell Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 6
+            },
+            {
+              "weight": 70.0,
+              "reps": 8
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "jeff_nipard_cable_curls",
+          "name": "Jeff Nipard Cable Curls",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-26",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "seated_db_press",
+          "name": "Seated DB Press",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "weight": 65.0,
+              "reps": 11
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 200.0,
+              "reps": 10
+            },
+            {
+              "weight": 190.0,
+              "reps": 12
+            },
+            {
+              "weight": 180.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 45.0,
+              "reps": 12
+            },
+            {
+              "weight": 45.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 6
+            }
+          ]
+        },
+        {
+          "id": "15_power_mode_x_10",
+          "name": "15 power mode x 10",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "db_shrugs",
+          "name": "DB Shrugs",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            },
+            {
+              "weight": 70.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-24",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "romanian_deadlifts",
+          "name": "Romanian Deadlifts",
+          "sets": [
+            {
+              "weight": 50.0,
+              "reps": 12
+            },
+            {
+              "weight": 50.0,
+              "reps": 12
+            },
+            {
+              "weight": 50.0,
+              "reps": 12
+            },
+            {
+              "weight": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 8
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 8
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 17
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 18
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-09-22",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 50, "reps": 8}, {"weight": 40, "reps": 10}, {"weight": 30, "reps": 10}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 70, "reps": 8}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 10}, {"weight": 55, "reps": 10}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 50.0,
+              "reps": 8
+            },
+            {
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "narrow_grip_incline_dumbbell_press",
+          "name": "Narrow Grip Incline Dumbbell Press",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 8
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 10
+            },
+            {
+              "weight": 55.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "jeff_nipard_cable_curls",
+          "name": "Jeff Nipard Cable Curls",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-19",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "smith_machine_overhead_press",
+          "name": "Smith Machine Overhead Press",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 6
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 10
+            },
+            {
+              "weight": 45.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "techno_gym_lat_pull",
+          "name": "Techno gym lat pull",
+          "sets": [
+            {
+              "weight": 200.0,
+              "reps": 8
+            },
+            {
+              "weight": 190.0,
+              "reps": 12
+            },
+            {
+              "weight": 180.0,
+              "reps": 11
+            }
+          ]
+        },
+        {
+          "id": "seated_arnold_press",
+          "name": "Seated Arnold Press",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "weight": 40.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 4
+            }
+          ]
+        },
+        {
+          "id": "15_power_mode_x_10",
+          "name": "15 power mode x 10",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-17",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "machine_leg_extensions",
+          "name": "Machine Leg Extensions",
+          "sets": [
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "weight": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "machine_leg_curls",
+          "name": "Machine Leg Curls",
+          "sets": [
+            {
+              "weight": 100.0,
+              "reps": 12
+            },
+            {
+              "weight": 80.0,
+              "reps": 12
+            },
+            {
+              "weight": 80.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 50.0,
+              "reps": 8
+            },
+            {
+              "weight": 45.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 17
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 18
+            }
+          ]
+        }
       ]
     },
     {
       "date": "2025-09-15",
       "day": "Monday",
       "exercises": [
-        {"id": "weighted_pullups", "sets": [{"weight": 45, "reps": 8}, {"weight": 35, "reps": 8}, {"weight": 25, "reps": 10}]},
-        {"id": "incline_chest_press", "sets": [{"weight": 70, "reps": 6}, {"weight": 65, "reps": 10}, {"weight": 60, "reps": 10}, {"weight": 55, "reps": 10}]}
+        {
+          "id": "weighted_pull_ups",
+          "name": "Weighted Pull-ups",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 8
+            },
+            {
+              "weight": 35.0,
+              "reps": 8
+            },
+            {
+              "weight": 25.0,
+              "reps": 10
+            },
+            {
+              "weight": 0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "narrow_grip_incline_dumbbell_press",
+          "name": "Narrow Grip Incline Dumbbell Press",
+          "sets": [
+            {
+              "weight": 70.0,
+              "reps": 6
+            },
+            {
+              "weight": 65.0,
+              "reps": 10
+            },
+            {
+              "weight": 60.0,
+              "reps": 10
+            },
+            {
+              "weight": 55.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "jeff_nipard_cable_curls",
+          "name": "Jeff Nipard Cable Curls",
+          "sets": [
+            {
+              "weight": 40.0,
+              "reps": 7
+            },
+            {
+              "weight": 35.0,
+              "reps": 9
+            },
+            {
+              "weight": 30.0,
+              "reps": 10
+            },
+            {
+              "weight": 30.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "cable_face_pulls",
+          "name": "Cable Face Pulls",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 12
+            },
+            {
+              "weight": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-12",
+      "day": "Friday",
+      "exercises": [
+        {
+          "id": "smith_machine_overhead_press",
+          "name": "Smith Machine Overhead Press",
+          "sets": [
+            {
+              "weight": 45.0,
+              "reps": 10
+            },
+            {
+              "weight": 55.0,
+              "reps": 8
+            },
+            {
+              "weight": 50.0,
+              "reps": 8
+            },
+            {
+              "weight": 45.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "one_arm_dumbbell_rows",
+          "name": "One-Arm Dumbbell Rows",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "arnold_press",
+          "name": "Arnold Press",
+          "sets": [
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "weight": 35.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "cable_lateral_raises",
+          "name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "weight": 15.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            },
+            {
+              "weight": 5.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-10",
+      "day": "Wednesday",
+      "exercises": [
+        {
+          "id": "romanian_deadlifts",
+          "name": "Romanian Deadlifts",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            },
+            {
+              "weight": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "single_arm_shrug",
+          "name": "Single Arm Shrug",
+          "sets": [
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            },
+            {
+              "weight": 75.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "id": "parallel_chin_ups",
+          "name": "Parallel Chin-ups",
+          "sets": [
+            {
+              "weight": 50.0,
+              "reps": 6
+            },
+            {
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "weight": 30.0,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "id": "reverse_shoulder_cable_flys",
+          "name": "Reverse Shoulder Cable Flys",
+          "sets": [
+            {
+              "weight": 20.0,
+              "reps": 10
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            },
+            {
+              "weight": 15.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "id": "neck_curls",
+          "name": "Neck Curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 17
+            }
+          ]
+        },
+        {
+          "id": "reverse_neck_curls",
+          "name": "Reverse Neck curls",
+          "sets": [
+            {
+              "weight": 0,
+              "reps": 20
+            },
+            {
+              "weight": 10.0,
+              "reps": 18
+            }
+          ]
+        }
       ]
     }
-  ],
-  "prs": {
-    "weighted_pullups": {"weight": 70, "reps": 7, "date": "2025-11-10", "estimated1RM": 84},
-    "techno_lat_pull": {"weight": 250, "reps": 7, "date": "2025-12-05", "estimated1RM": 292},
-    "seated_db_press": {"weight": 75, "reps": 12, "date": "2026-01-30", "estimated1RM": 107},
-    "bulgarian_split_squat": {"weight": 45, "reps": 12, "date": "2026-02-04", "estimated1RM": 64},
-    "neck_curls": {"weight": 25, "reps": 18, "date": "2026-02-02", "estimated1RM": 40},
-    "overhead_tricep_ext": {"weight": 75, "reps": 12, "date": "2026-01-28", "estimated1RM": 107},
-    "reverse_neck_curls": {"weight": 25, "reps": 18, "date": "2026-02-04", "estimated1RM": 40},
-    "single_arm_shrug": {"weight": 75, "reps": 15, "date": "2026-02-04", "estimated1RM": 94},
-    "reverse_shoulder_flys": {"weight": 20, "reps": 12, "date": "2026-02-04", "estimated1RM": 29},
-    "cable_lat_raises": {"weight": 20, "reps": 9, "date": "2026-02-04", "estimated1RM": 26},
-    "incline_delt_raises": {"weight": 30, "reps": 8, "date": "2026-02-06", "estimated1RM": 37},
-    "db_shrugs": {"weight": 75, "reps": 15, "date": "2026-02-06", "estimated1RM": 94}
-  }
+  ]
 }
