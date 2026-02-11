@@ -519,7 +519,9 @@
                     const lastDateStr = lastDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase();
                     document.getElementById('last-session').textContent = lastDateStr;
                     
-                    const daysAgo = Math.floor((today - lastDate) / (1000 * 60 * 60 * 24));
+                    const todayMid = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+                    const lastMid = new Date(lastDate.getFullYear(), lastDate.getMonth(), lastDate.getDate());
+                    const daysAgo = Math.round((todayMid - lastMid) / (1000 * 60 * 60 * 24));
                     const agoEl = document.getElementById('last-session-ago');
                     if (daysAgo === 0) {
                         agoEl.textContent = 'Today';
